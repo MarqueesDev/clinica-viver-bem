@@ -1,0 +1,88 @@
+#buy-menu{
+    height: 850px;
+    background-image: url("../img/bgview-clinic.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    position: relative;
+}
+
+#bg-emb {
+    background-color: rgba(236, 236, 236, 0.681);
+    height: 100%;
+    width: 100%;
+}
+
+#emb-scheet {
+    margin: 0px 40px;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* configuração font buy-menu */
+.buy-pass p {
+    font-family: "Raleway",sans-serif;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#bg-emb {
+    background-color: rgba(39, 39, 39, 0.700);
+    height: 100%;
+    width: 100%;
+}
+
+#emb-scheet {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* configuração font buy-menu */
+.buy-pass p {
+    font-family: "Raleway",sans-serif;
+    text-align: center;
+}
+
+.buy-pass a {
+    font-weight: 600;
+    font-size: 20px;
+    color: white;
+    text-transform: uppercase;
+    padding: 16px 10px;
+}
+
+/* configuração borda buy-menu */
+
+.buy-pass a {
+    background-color: black;
+    border: 3px solid #780514;
+    border-radius: 15px;
+    transition: border-color 0.7s, background-color 0.7s;
+}
+
+.buy-pass a:hover {
+    color: #780514;
+    border: 3px solid #fff;
+    border-radius: 15px;
+    background-color: #ddd;
+}
+
+.buy-pass a:visited {
+    border: 3px solid #780514;
+    border-radius: 15px;
+    transition: border-color 0.7s, background-color 0.7s;
+}
+
+.buy-pass a:visited:hover {
+    color: #780514;
+    border: 3px solid #fff;
+    border-radius: 15px;
+    background-color: #ddd;
+}

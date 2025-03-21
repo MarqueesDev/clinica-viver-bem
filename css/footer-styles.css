@@ -1,0 +1,147 @@
+footer {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    padding-top: 120px;
+}
+
+footer p {
+    margin: 0px 30px;
+    margin-bottom: 0px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+footer p {
+    line-height: 1;
+}
+
+footer p #ocult {
+    color: #555;
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    text-align: justify;
+    text-transform: uppercase;
+}
+
+footer p #ocult q, span {
+    font-weight: 600;
+    color: #aaa;
+}
+
+footer p #ocult span {
+    font-weight: 800;
+}
+
+div.footer-logo {
+  padding-bottom: 20px;
+}
+
+.footer-logo a{
+    width: 100%;
+}
+
+.footer-logo p{
+    text-align: center;
+}
+
+.footer-logo p a img{
+    display: inline-block;
+    width: 200px;
+}
+
+#footend-color {
+  padding: 30px 0px;
+  width: 100%;
+  background-color: #292929; /* Cinza */
+  height: 100%;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contact-form label {
+  margin-top: 10px;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  /* font */
+  color: #c3c3c3;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  margin-top: 0px;
+  margin-bottom: 15px;
+  letter-spacing: 1.5px;
+}
+
+#contact-title {
+  color: #333;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  margin-top: 0px;
+  margin-bottom: 15px;
+  letter-spacing: 1.5px;
+  text-align: center;
+  font-size: 24px; /* Add this line to increase the font size */
+  font-weight: 900; /* Add this line to make the font bolder */
+  color: #fff; /* Add this line to make the font color lighter */
+}
+
+#contact-form label {
+  margin-top: 10px;
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0px 0px 5px rgba(76, 175, 80, 0.5);
+}
+
+#contact-form button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #4CAF50;
+  color: #eeeeee;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.7s, color 0.7s;
+}
+
+#contact-form button:hover {
+  background-color: #265c27;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 15px;
+  padding-bottom: 15px;
+}

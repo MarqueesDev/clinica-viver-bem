@@ -1,0 +1,204 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-width: 400px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("../img/ClinicaIA.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center 70px;
+    position: relative;
+    text-align: center;
+    font-size: large;
+    color: white;
+}
+
+.all {
+    margin: 40px 0px;
+}
+
+header hr {
+    width: 100%;
+    height: 5px;
+    border: 0px;
+    background-color: darkgrey;
+}
+
+form {
+    display: block;
+    max-width: 800px;
+    background-color: rgba(37, 40, 42, 0.843);
+    margin: 0px auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 5px solid #530727a6;
+    border-radius: 25px;
+}
+
+div input,
+div label {
+    display: block;
+}
+
+.title {
+    color: #d3d3d3;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0px;
+    margin-top: 10px;
+}
+
+#border-fset {
+    border: 2px solid white;
+    border-radius: 25px;
+}
+
+.campo {
+    min-width: 30px;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    font-weight: 700;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.spaceline {
+    border: 3px solid black;
+    padding: 10px 20px;
+}
+
+#last-camp {
+    padding-bottom: 20px;
+}
+
+#option-contract label {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#option-contract select {
+    display: block;
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#option-contract select option {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#termos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom:  20px;
+    background-color: #737373;
+    padding: 20px;
+    border-radius: 5px;
+    flex-direction: column;
+    width: 50%;
+    position: relative;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#termos label {
+    margin-right: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#termos p {
+    line-height: 0.5;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#termos p small span {
+    color: #fff;
+    text-align: center;
+    height: 20px;
+    width: 363px;
+    font: 0.5em sans-serif;
+}
+
+.check input[type="reset"],
+.check input[type="submit"] {
+    display: block;
+    margin: 0 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 2px solid #005a9c;
+    background-color: #005a9c;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: border 0.5, border-color 0.5;
+}
+
+.check input[type="reset"]:hover,
+.check input[type="submit"]:hover {
+    background-color: #00426d;
+    border: 2px solid #002a46;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+/* CHECKBOX */
+.custom-checkbox:checked {
+background-color: #ffffff;
+border-color: #000000;
+}
+
+.custom-checkbox {
+appearance: none;
+background-color: #fff;
+border: 1.5px solid #000000;
+border-radius: 4px;
+cursor: pointer;
+height: 20px;
+width: 20px;
+margin: 0 10px 10px 10px;
+}
+
+.custom-checkbox {
+    position: relative;
+  }
+
+.custom-checkbox:checked::before {
+    content: "\2713";
+    font-size: 16px;
+    font-weight: bolder;
+    color: #000000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.custom-checkbox-label {
+position: relative;
+padding-left: 30px;
+}
