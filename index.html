@@ -164,7 +164,7 @@
             </p>
         </div>
 
-        <form id="contact-form">
+        <form id="contact-form" action="https://formspree.io/f/xdkeeegn" method="POST">
             <h2 id="contact-title">Contate-nos</h1>
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email">
@@ -180,6 +180,36 @@
 
                 <button type="submit">Enviar solicitação de contato</button>
         </form>
+        <!-- scripts -->
+        <script>
+            const form = document.getElementById('contactForm');
+            const formMessage = document.getElementById('formMessage');
+        
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.ok) {
+                        formMessage.innerHTML = "Mensagem enviada com sucesso!";
+                        form.reset();
+                    } else {
+                        formMessage.innerHTML = "Ocorreu um erro. Por favor, tente novamente.";
+                    }
+                })
+                .catch(error => {
+                    formMessage.innerHTML = "Ocorreu um erro. Por favor, tente novamente.";
+                });
+            });
+        </script>
+        <!-- scripts end -->
         <!--End Footer Logo-->
 
         <div id="footend-color">
