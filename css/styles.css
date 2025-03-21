@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    padding-top: calc(10vh + 50px);
+}
+
+table {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+td {
+    padding: 12px;
+}
+
+h2 {
+    color: #aaa;
+}
+
+label {
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+input[type="text"].desfoque, 
+input[type="email"].desfoque, 
+input[type="tel"].desfoque,
+textarea.desfoque {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #4CAF50;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus.desfoque, 
+input[type="email"]:focus.desfoque, 
+input[type="tel"]:focus.desfoque, 
+textarea:focus.desfoque {
+    border-color: #9b59b6;
+    outline: none;
+    box-shadow: 0 0 5px rgba(155, 89, 182, 0.5);
+}
+
+textarea.desfoque {
+    resize: none;  /* Impede o redimensionamento */
+    height: 150px;  /* Define uma altura fixa */
+}
+
+input.desfoque[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+input[type="submit"]:hover {
+    background-color: #9b59b6;
+}
+
+input[type="submit"]:active {
+    transform: scale(0.98);
+} */
+
+
+/* Estilo para a seleção de texto */
+::selection {
+    background-color: #4CAF50; /* Cor de fundo da seleção */
+    color: #000000; /* Cor do texto selecionado */
+}
+
+/* Para navegadores mais antigos do Firefox */
+::-moz-selection {
+    background-color: #4CAF50;
+    color: #000000;
+}
+/* configuração pop-up */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.modal-content {
+    background-color: #333;
+    color: white;
+    margin: 0 auto;
+    padding: 15px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    display: inline-block;
+    max-width: 80%;
+}
+
+#modalMessage {
+    margin: 0;
+    font-size: 16px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

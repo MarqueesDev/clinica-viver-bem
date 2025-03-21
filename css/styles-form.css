@@ -7,9 +7,10 @@ body {
     min-width: 400px;
     font-family: Arial, Helvetica, sans-serif;
     background-image: url("../img/ClinicaIA.jpg");
-    background-attachment: fixed;
     background-repeat: no-repeat;
-    background-position: center -150px;
+    background-attachment: scroll;
+    background-position: center 300px;
+    background-size: auto;
     position: relative;
     text-align: center;
     font-size: large;
@@ -27,10 +28,10 @@ header hr {
     background-color: darkgrey;
 }
 
-form {
+form#formClic {
     display: block;
     max-width: 800px;
-    background-color: rgba(37, 40, 42, 0.843);
+    background-color: rgba(0, 0, 0, 0.843);
     margin: 0px auto;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -120,7 +121,6 @@ div label {
 
 #termos label {
     margin-right: 10px;
-    font-size: 18px;
     font-weight: bold;
     text-align: center;
 }
