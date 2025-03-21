@@ -6,10 +6,10 @@
 body {
     min-width: 400px;
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url("../img/ClinicaIA.png");
+    background-image: url("../img/ClinicaIA.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-position: center 70px;
+    background-position: center -150px;
     position: relative;
     text-align: center;
     font-size: large;
