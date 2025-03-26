@@ -33,6 +33,22 @@
     <link rel="stylesheet" href="css/dropdown-style.css">
     <link rel="stylesheet" href="css/styles.css">
 
+    <!-- PRELOAD -->
+
+    <link rel="preload" as="image" href="img/bgview-clinic.jpg" type="image/jpeg">
+    <link rel="preload" as="image" href="img/cardiology.jpg" type="image/jpeg">
+    <link rel="preload" as="image" href="img/ClinicaIA.jpg" type="image/jpeg">
+    <link rel="preload" as="image" href="img/ClinicaIA.png" type="image/jpeg">
+    <link rel="preload" as="image" href="img/dermatology.jpg" type="image/jpeg">
+    <link rel="preload" as="image" href="img/endocrinology.jpg" type="image/jpeg">
+    <link rel="preload" as="image" href="img/ginecology.jpg" type="image/jpeg">
+    <link rel="preload" as="image" href="img/logotipo-white.png" type="image/jpeg">
+    <link rel="preload" as="image" href="img/only_logotipo-white.png" type="image/jpeg">
+    <link rel="preload" as="image" href="img/ortopedy.jpg" type="image/jpeg">
+    <link rel="preload" as="image" href="img/pediatry.jpg" type="image/jpeg">
+    <link rel="preload" as="image" href="img/post-header.jpg" type="image/jpeg">
+
+
     <!-- script -->
     <script src="js/dropdown-script.js"></script>
 
@@ -48,7 +64,7 @@
                 <ul class="nav-menu-inner">
                     <li><a href="#inicio">Início</a></li>
                     <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#consultar" id="nav-login">Consultar</a></li>
+                    <li><a href="#cadastrar" id="nav-login">Cadastrar</a></li>
                     <li><a href="#contact-us">Contato</a></li>
                 </ul>
             </div>
@@ -67,7 +83,7 @@
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <li><a class="dropdown-item" href="#inicio">Início</a></li>
                     <li><a class="dropdown-item" href="#sobre">Sobre</a></li>
-                    <li><a class="dropdown-item" href="#consultar" id="nav-login">Consultar</a></li>
+                    <li><a class="dropdown-item" href="#cadastrar" id="nav-login">Cadastrar</a></li>
                     <li><a class="dropdown-item" href="#contact-us">Contato</a></li>
                 </ul>
             </div>
@@ -76,6 +92,16 @@
 
     <!-- O inicio -->
     <main>
+        <button id="acessibilidade-btn" class="acessibilidade-btn">♿</button>
+
+        <div id="acessibilidade-menu" class="acessibilidade-menu">
+            <button onclick="alterarFonte('+')">A+</button>
+            <button onclick="alterarFonte('-')">A-</button>
+            <button onclick="modoAltoContraste()">Alto Contraste</button>
+        </div>
+        <!-- Script Acessibilidade -->
+        <script src="js/acessibilidade.js"></script>
+        <!-- End Script Acessibilidade  -->
         <div class="bg-citation">
             <div class="citation-title">
                 <!-- Título do site -->
@@ -154,7 +180,7 @@
     </main>
     <!-- COMPRAS -->
     <div id="buy-menu">
-        <span id="consultar" style="position: absolute; top: -70px;"></span>
+        <span id="cadastrar" style="position: absolute; top: -70px;"></span>
         <div id="bg-emb">
             <div id="emb-scheet">
                 <h2 class="text-light">Um atendimento com foco em qualidade e eficiência, é só na <br><span
@@ -162,7 +188,7 @@
                 <h3 class="text-light">Agende Sua primeira consulta e cuide da sua saúde com quem entende do assunto.
                     <span class="page-title">Agende já!</span>
                 </h3>
-                <p class="buy-pass"><a href="form.html">Consultar agora!</a></p>
+                <p class="buy-pass"><a href="form.html">Cadastrar agora!</a></p>
             </div>
         </div>
     </div>
@@ -177,24 +203,24 @@
                 </a>
             </p>
         </div>
-    
+
         <form id="contactFormu" action="https://formspree.io/f/xdkeeegn" method="POST">
-      
-                    <h2>Contate-nos</h2>
-                
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email">
-                
-                    <label for="cell-phone">Celular:</label>
-                    <input type="tel" id="cell-phone" name="cell-phone">         
-                
-                    <label for="name">Nome:</label>
-                    <input type="text" id="name" name="name">
-                
-                    <label for="message">Menssagem:</label>
-                    <textarea class="desfoque" id="message" name="message"></textarea>        
-                
-                    <button type="submit">Enviar solicitação de contato</button>
+
+            <h2>Contate-nos</h2>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+
+            <label for="cell-phone">Celular:</label>
+            <input type="tel" id="cell-phone" name="cell-phone">
+
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name">
+
+            <label for="message">Menssagem:</label>
+            <textarea class="desfoque" id="message" name="message"></textarea>
+
+            <button type="submit">Enviar solicitação de contato</button>
         </form>
         <div id="formMessage"></div>
         <div class="nebula"></div>
@@ -210,10 +236,10 @@
         <script>
             const form = document.getElementById('contactFormu');
             const formMessage = document.getElementById('formMessage');
-    
+
             form.addEventListener('submit', function (e) {
                 e.preventDefault();
-    
+
                 fetch(form.action, {
                     method: 'POST',
                     body: new FormData(form),
@@ -237,14 +263,14 @@
         </script>
         <!-- scripts end -->
         <!--End Footer Logo-->
-    
+
         <div id="footend-color">
             <!-- SEGURANÇA -->
             <p><small id="ocult">quipados com tecnologia de ponta e uma equipe dedicada - garantimos o cuidado e a saúde
                     de nossos pacientes em cada atendimento. - <q>Sua saúde é nossa prioridade!</q> - <span>Clínica
                         Viver Bem</span>.</small></p>
             <!-- SEGURANÇA -->
-    
+
             <!-- Copyright -->
             <p id="contact-us" class="copyright">
                 &copy; 2025 <a><b class="color">Dev. Alan Marques</b></a>. Todos os direitos reservados.

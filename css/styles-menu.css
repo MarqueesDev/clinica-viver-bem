@@ -59,22 +59,6 @@ header {
     margin-right: 10px;
 }
 
-#nav-login {
-    top: 20px;
-    border-style: solid!important;
-    border-color: #780514!important;
-    border-radius: 10px!important;
-    border-width: 2px!important;
-    transition: border-color 0.5s;
-}
-
-#nav-login:hover {
-    border-style: solid!important;
-    border-color: #ffffff!important;
-    border-radius: 10px!important;
-    border-width: 2px!important;
-}
-
 .nav-menu ul.nav-menu-inner > li {
     width: 112px;
     height: 50px;

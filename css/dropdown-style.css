@@ -1,3 +1,5 @@
+
+
 .menu-icon {
     display: none;
 }
@@ -15,6 +17,17 @@
     left: 0;
 }
 
+.dropdown-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+.dropdown-menu li {
+    padding: 0;
+    margin: 0;
+  }
+
 ul.dropdown-menu > li > a {
     box-sizing: border-box;
     display: block;
@@ -31,6 +44,9 @@ ul.dropdown-menu > li > a {
 }
 
 #nav-login {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
     border-style: solid!important;
     border-color: #780514!important;
     border-radius: 10px!important;
@@ -39,6 +55,10 @@ ul.dropdown-menu > li > a {
 }
 
 #nav-login:hover {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    text-align:  center;
     border-style: solid!important;
     border-color: #ffffff!important;
     border-radius: 10px!important;

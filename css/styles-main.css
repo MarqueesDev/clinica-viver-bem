@@ -73,6 +73,26 @@ ul.list-none {
     text-align: center;
 }
 
+/* TOPICS */
+#cardiology:hover {
+    background-image: url("../img/cardiology.jpg");
+}
+#dermatology:hover {
+    background-image: url("../img/dermatology.jpg");
+}
+#ginecology:hover {
+    background-image: url("../img/ginecology.jpg");
+}
+#pediatry:hover {
+    background-image: url("../img/pediatry.jpg");
+}
+#endocrinology:hover {
+    background-image: url("../img/endocrinology.jpg");
+}
+#ortopedy:hover {
+    background-image: url("../img/ortopedy.jpg");
+}
+
 #form ul .block {
     display: block;
     margin: 20px auto;
@@ -100,26 +120,6 @@ ul.list-none {
     background-size: cover;
     background-position: center;
     box-sizing: border-box;
-}
-
-/* TOPICS */
-#cardiology:hover {
-    background-image: url("../img/cardiology.jpg");
-}
-#dermatology:hover {
-    background-image: url("../img/dermatology.jpg");
-}
-#ginecology:hover {
-    background-image: url("../img/ginecology.jpg");
-}
-#pediatry:hover {
-    background-image: url("../img/pediatry.jpg");
-}
-#endocrinology:hover {
-    background-image: url("../img/endocrinology.jpg");
-}
-#ortopedy:hover {
-    background-image: url("../img/ortopedy.jpg");
 }
 
 #form ul .block li{

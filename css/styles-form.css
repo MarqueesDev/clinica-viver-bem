@@ -138,8 +138,7 @@ div label {
     width: 363px;
     font: 0.5em sans-serif;
 }
-
-.check input[type="reset"],
+/* SUBMIT */
 .check input[type="submit"] {
     display: block;
     margin: 0 10px;
@@ -154,13 +153,58 @@ div label {
     transition: border 0.5, border-color 0.5;
 }
 
-.check input[type="reset"]:hover,
 .check input[type="submit"]:hover {
     background-color: #00426d;
     border: 2px solid #002a46;
     border-radius: 5px;
     transition: 0.5s;
 }
+/* RESET */
+.check input[type="reset"] {
+    display: block;
+    margin: 0 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 2px solid #550000;
+    background-color: #5f0000;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: border 0.5, border-color 0.5;
+}
+
+.check input[type="reset"]:hover {
+    background-color: #440000;
+    border: 2px solid #350000;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+/* BUTTOM */
+.check input[type="buttom"] {
+    display: block;
+    margin: 0 0px;
+    padding: 10px 0px;
+    border-radius: 5px;
+    background-color: #7c7c7c;
+    border: 2px solid #8d8d8d;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: border 0.5, border-color 0.5;
+
+}
+
+.check input[type="buttom"]:hover {
+    background-color: #474747;
+    border: 2px solid #161616;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+
 
 /* CHECKBOX */
 .custom-checkbox:checked {
