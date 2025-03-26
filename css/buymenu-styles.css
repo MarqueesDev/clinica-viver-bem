@@ -45,6 +45,11 @@
 }
 
 /* configuração font buy-menu */
+.buy-pass {
+    position: relative;
+    z-index: 1;
+}
+
 .buy-pass p {
     font-family: "Raleway",sans-serif;
     text-align: center;

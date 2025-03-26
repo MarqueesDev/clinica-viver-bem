@@ -26,6 +26,19 @@
 
 </head>
 <body>
+    <button id="acessibilidade-btn" class="acessibilidade-btn">♿</button>
+
+    <div id="acessibilidade-menu" class="acessibilidade-menu">
+        <button style=" border: none;
+    outline: none;" onclick="alterarFonte('+')">A+</button>
+        <button style=" border: none;
+    outline: none;" onclick="alterarFonte('-')">A-</button>
+        <button style=" border: none;
+    outline: none;" onclick="modoAltoContraste()">Alto Contraste</button>
+    </div>
+    <!-- Script Acessibilidade -->
+    <script src="js/acessibilidade.js"></script>
+    <!-- End Script Acessibilidade  -->
     <!-- Cabeçalho -->
     <header id="nav-sobreposition">
         <!-- Barra de navegação pelo site -->
@@ -130,7 +143,7 @@
                 <!-- Reset -->
                 <input id="clear" style="display: inline-block;" type="reset" value="Limpar">
                 <!-- Login -->
-                <a href="index.html"></a><input style="display: inline-block;" type="buttom" value="Já tenho uma conta"></a>
+                <a href="index.html"><!-- futuro login --></a><input style="display: inline-block;" type="buttom" value="Já tenho uma conta!"></a>
                 <!-- 5 - envio de form -->
                 <input style="display: inline-block;" type="submit" value="Cadastrar" class="enviar">
             </div>
@@ -163,7 +176,7 @@
                 <label for="message">Menssagem:</label>
                 <textarea class="desfoque" id="message" name="message"></textarea>        
             
-                <button type="submit">Enviar solicitação de contato</button>
+                <button id="contact-buttom" type="submit">Enviar solicitação de contato</button>
     </form>
     <div id="formMessage"></div>
     <div class="nebula"></div>

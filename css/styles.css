@@ -21,7 +21,7 @@ table {
     background-color: #2a2a2a;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
 td {
@@ -37,8 +37,8 @@ label {
     color: #4CAF50;
 }
 
-input[type="text"].desfoque, 
-input[type="email"].desfoque, 
+input[type="text"].desfoque,
+input[type="email"].desfoque,
 input[type="tel"].desfoque,
 textarea.desfoque {
     width: 100%;
@@ -50,9 +50,9 @@ textarea.desfoque {
     transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-input[type="text"]:focus.desfoque, 
-input[type="email"]:focus.desfoque, 
-input[type="tel"]:focus.desfoque, 
+input[type="text"]:focus.desfoque,
+input[type="email"]:focus.desfoque,
+input[type="tel"]:focus.desfoque,
 textarea:focus.desfoque {
     border-color: #9b59b6;
     outline: none;
@@ -60,8 +60,10 @@ textarea:focus.desfoque {
 }
 
 textarea.desfoque {
-    resize: none;  /* Impede o redimensionamento */
-    height: 150px;  /* Define uma altura fixa */
+    resize: none;
+    /* Impede o redimensionamento */
+    height: 150px;
+    /* Define uma altura fixa */
 }
 
 input.desfoque[type="submit"] {
@@ -82,13 +84,16 @@ input[type="submit"]:hover {
 
 input[type="submit"]:active {
     transform: scale(0.98);
-} */
+}
 
+*/
 
 /* Estilo para a seleção de texto */
 ::selection {
-    background-color: #4CAF50; /* Cor de fundo da seleção */
-    color: #000000; /* Cor do texto selecionado */
+    background-color: #4CAF50;
+    /* Cor de fundo da seleção */
+    color: #000000;
+    /* Cor do texto selecionado */
 }
 
 /* Para navegadores mais antigos do Firefox */
@@ -96,6 +101,7 @@ input[type="submit"]:active {
     background-color: #4CAF50;
     color: #000000;
 }
+
 /* configuração pop-up */
 .modal {
     display: none;
@@ -113,7 +119,7 @@ input[type="submit"]:active {
     margin: 0 auto;
     padding: 15px 20px;
     border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     display: inline-block;
     max-width: 80%;
 }
@@ -138,6 +144,12 @@ input[type="submit"]:active {
     cursor: pointer;
 }
 
+#contact-buttom {
+    border: none !important;
+    outline: none !important;
+}
+
+
 /* ACESSIBILIDADE BUTTON */
 /* Estiliza o botão fixo no canto inferior direito */
 .acessibilidade-btn {
@@ -154,6 +166,7 @@ input[type="submit"]:active {
     cursor: pointer;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
     transition: 0.3s;
+    z-index: 1;
 }
 
 .acessibilidade-btn:hover {
@@ -172,6 +185,7 @@ input[type="submit"]:active {
     display: none;
     flex-direction: column;
     gap: 5px;
+    z-index: 1;
 }
 
 .acessibilidade-menu button {
@@ -188,9 +202,147 @@ input[type="submit"]:active {
     background-color: #0056b3;
 }
 
-/* Alto contraste */
 .alto-contraste {
-    background-color: black !important;
     color: yellow !important;
 }
+
+.alto-contraste {
+    color: yellow !important;
+}
+
+.alto-contraste a {
+    color: yellow !important;
+}
+
+.alto-contraste a:hover {
+    color: yellow !important;
+}
+
+.alto-contraste input,
+.alto-contraste textarea,
+.alto-contraste select {
+    background-color: #444;
+    color: yellow !important;
+}
+
+
+.alto-contraste,
+#acessibilidade-btn {
+    border-color: none;
+}
+
+
+#acessibilidade-btn,
+#acessibilidade-menu {
+    border: none;
+    outline: none;
+}
+
+.alto-contraste button {
+    /* Estilos dos botões */
+    background-color: #333;
+    /* Cinza escuro */
+    color: #fbff00;
+    border: solid #fbff00;
+}
+
+.alto-contraste button:hover {
+    /* Estilos dos botões ao passar o mouse */
+    background-color: #000;
+    /* Preto */
+    color: #fbff00;
+}
+
+.alto-contraste .buy-pass a {
+    /* Estilos dos links */
+    background-color: #333;
+    /* Cinza escuro */
+    color: #fbff00;
+    text-decoration: none;
+    border-color: #fbff00;
+}
+
+.alto-contraste .buy-pass a:hover {
+    /* Estilos dos links ao passar o mouse */
+    background-color: #000;
+    /* Preto */
+    color: #fbff00;
+    border: solid #a2a500;
+}
+
+.alto-contraste #contactFormu button[type="submit"] {
+    /* Estilos do botão de envio */
+    background-color: #333;
+    /* Cinza escuro */
+    color: #fbff00;
+    border: solid #fbff00;
+}
+
+.alto-contraste #contactFormu button[type="submit"]:hover {
+    /* Estilos do botão de envio ao passar o mouse */
+    background-color: #000;
+    /* Preto */
+    color: #fbff00;
+    border: solid #fbff00;
+}
+
+.alto-contraste .check input[type="reset"] {
+    /* Estilos do botão de reset */
+    background-color: #333;
+    color: #fbff00;
+    border-color: #fbff00;
+}
+
+.alto-contraste .check input[type="reset"]:hover {
+    /* Estilos do botão de reset ao passar o mouse */
+    background-color: #000;
+    color: #fbff00;
+    border-color: #706900;
+}
+
+.alto-contraste .check input[type="submit"] {
+    /* Estilos do botão de envio */
+    background-color: #333;
+    color: #fbff00;
+    border-color: #fbff00;
+
+}
+
+.alto-contraste .check input[type="submit"]:hover {
+    /* Estilos do botão de envio ao passar o mouse */
+    background-color: #000;
+    color: #fbff00;
+    border-color: #706900;
+}
+
+.alto-contraste .check input[type="buttom"] {
+    display: block;
+    margin: 0 0px;
+    padding: 10px 0px;
+    border-radius: 5px;
+    background-color: #7c7c7c;
+    border: 2px solid #ffee00;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: border 0.5, border-color 0.5;
+
+}
+
+.alto-contraste .check input[type="buttom"]:hover {
+    background-color: #474747;
+    border: 2px solid #706900;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+
+.alto-contraste input[type="date"]::-webkit-calendar-picker-indicator {
+    /* Efeito de cor ao calendário */
+    filter: invert(1) brightness(1) contrast(1);
+    /* Cor do ícone do calendário */
+}
+
 /* END ACESSIBILIDADE BUTTON */
