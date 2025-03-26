@@ -102,7 +102,7 @@ h2 {
 #contactFormu textarea:focus {
   outline: none;
   border-color: #4CAF50;
-  box-shadow: 0px 0px 5px rgba(76, 175, 80, 0.5);
+  box-shadow: 0px 0px 5px rgba(175, 76, 76, 0.5);
 }
 
 #contactFormu button {

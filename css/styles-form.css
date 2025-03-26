@@ -19,6 +19,7 @@ body {
 
 .all {
     margin: 40px 0px;
+    margin-top: 25px;
 }
 
 header hr {
@@ -50,7 +51,7 @@ div label {
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
     letter-spacing: 0px;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 #border-fset {
@@ -109,6 +110,7 @@ div label {
     justify-content: center;
     margin-bottom:  20px;
     background-color: #737373;
+    color: #550000;
     padding: 20px;
     border-radius: 5px;
     flex-direction: column;
@@ -118,6 +120,7 @@ div label {
     left: 50%;
     transform: translateX(-50%);
 }
+
 
 #termos label {
     margin-right: 10px;
@@ -181,10 +184,10 @@ div label {
     transition: 0.5s;
 }
 /* BUTTOM */
-.check input[type="buttom"] {
+.check input[type="button"] {
     display: block;
     margin: 0 0px;
-    padding: 10px 0px;
+    padding: 10px 15px;
     border-radius: 5px;
     background-color: #7c7c7c;
     border: 2px solid #8d8d8d;
@@ -197,7 +200,7 @@ div label {
 
 }
 
-.check input[type="buttom"]:hover {
+.check input[type="button"]:hover {
     background-color: #474747;
     border: 2px solid #161616;
     border-radius: 5px;

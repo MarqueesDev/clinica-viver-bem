@@ -34,7 +34,7 @@ h2 {
 
 label {
     font-weight: bold;
-    color: #4CAF50;
+    color: #ffffff;
 }
 
 input[type="text"].desfoque,
@@ -315,10 +315,10 @@ input[type="submit"]:active {
     border-color: #706900;
 }
 
-.alto-contraste .check input[type="buttom"] {
+.alto-contraste .check input[type="button"] {
     display: block;
     margin: 0 0px;
-    padding: 10px 0px;
+    padding: 10px 15px;
     border-radius: 5px;
     background-color: #7c7c7c;
     border: 2px solid #ffee00;
@@ -331,7 +331,7 @@ input[type="submit"]:active {
 
 }
 
-.alto-contraste .check input[type="buttom"]:hover {
+.alto-contraste .check input[type="button"]:hover {
     background-color: #474747;
     border: 2px solid #706900;
     border-radius: 5px;
