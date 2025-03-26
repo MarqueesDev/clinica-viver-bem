@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,8 @@
 
     <!-- link icons -->
     <link rel="shortcut icon" href="img/clinic-icon.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
     <!-- link styles -->
     <link rel="stylesheet" href="css/styles-menu.css">
@@ -19,28 +21,14 @@
     <link rel="stylesheet" href="css/modal-style.css">
     <link rel="stylesheet" href="css/styles.css">
 
-    
+
 
     <!-- script -->
     <script src="js/dropdown-script.js"></script>
 
 </head>
-<body>
-    <button id="acessibilidade-btn" class="acessibilidade-btn">♿</button>
 
-    <div id="acessibilidade-menu" class="acessibilidade-menu">
-        <button style=" border: none;
-    outline: none;" onclick="alterarFonte('+')">A+</button>
-        <button style=" border: none;
-    outline: none;" onclick="alterarFonte('-')">A-</button>
-        <button style=" border: none;
-    outline: none;" onclick="modoAltoContraste()">Alto Contraste</button>
-        <button style=" border: none;
-    outline: none;" onclick="leituraTexto()">Leitor de Texto</button>
-    </div>
-    <!-- Script Acessibilidade -->
-    <script src="js/acessibilidade.js"></script>
-    <!-- End Script Acessibilidade  -->
+<body>
     <!-- Cabeçalho -->
     <header id="nav-sobreposition">
         <!-- Barra de navegação pelo site -->
@@ -55,7 +43,7 @@
                 </ul>
             </div>
         </div>
-        
+
         <div class="nav-menu-dropdown">
             <!-- Ícone do menu -->
             <div class="menu-icon">
@@ -63,7 +51,7 @@
                 <span class="material-symbols-outlined menu-icon-close" style="display: none;">close</span>
             </div>
 
-            
+
             <!-- O menu dropdown -->
             <div class="dropdown" id="dropdown">
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -90,156 +78,181 @@
             </div>
         </div>
     </main>
-    <div class="all"> 
+    <div class="all">
         <form id="formClic" action="register.php" method="post">
             <fieldset id="border-fset" class="check" style="margin: 30px;">
                 <legend class="spaceline title">Preencha as suas informações pessoais</legend>
-        
-                <label class="title" for="f-name">Nome:</label>
+
+                <label class="title" for="f-name">Nome<span class="astimport">*</span>:</label>
                 <input class="campo title" type="text" id="f-name" name="f-name" required>
-        
-                <label class="title" for="l-name">Sobrenome:</label>
+
+                <label class="title" for="l-name">Sobrenome<span class="astimport">*</span>:</label>
                 <input class="campo title" type="text" id="l-name" name="l-name" required>
-        
-                <label class="title" for="email-cadastro">Email:</label>
-                <input class="campo title" type="email" id="email-cadastro" name="email-cadastro" autocomplete="email" required>
-        
-                <label class="title" for="cpf">CPF:</label>
+
+                <label class="title" for="email-cadastro">Email<span class="astimport">*</span>:</label>
+                <input class="campo title" type="email" id="email-cadastro" name="email-cadastro" autocomplete="email"
+                    required>
+
+                <label class="title" for="cpf">CPF<span class="astimport">*</span>:</label>
                 <input class="campo title" type="number" id="cpf" name="cpf" placeholder="123.456.789-12" required>
-        
-                <label class="title" for="endereco-cadastro">Endereço:</label>
-                <input class="campo title" type="text" id="endereco-cadastro" name="endereco-cadastro" autocomplete="endereco" required>
-        
-                <label class="title" for="tel">Telefone:</label>
-                <input class="campo title" type="tel" id="tel" name="tel" autocomplete="tel-national" placeholder="(61) 9912341234" required>
-        
+
+                <label class="title" for="endereco-cadastro">Endereço<span class="astimport">*</span>:</label>
+                <input class="campo title" type="text" id="endereco-cadastro" name="endereco-cadastro"
+                    autocomplete="endereco" required>
+
+                <label class="title" for="tel">Telefone<span class="astimport">*</span>:</label>
+                <input class="campo title" type="tel" id="tel" name="tel" autocomplete="tel-national"
+                    placeholder="(61) 9912341234" required>
+
                 <div>
-                    <label class="title" for="gen">Gênero:</label>
+                    <label class="title" for="gen">Gênero<span class="astimport">*</span>:</label>
                     <select class="campo title" id="gen" name="gen">
                         <option value="programador">Masculino</option>
                         <option value="professor">Feminino</option>
                     </select>
                 </div>
-        
-                <label class="title" id="age" class="title" for="birthday">Data de nascimento:</label>
+
+                <label class="title" id="age" class="title" for="birthday">Data de nascimento<span
+                        class="astimport">*</span>:</label>
                 <input class="campo title" type="date" id="birthday" name="birthday" required>
-        
+
                 <div id="last-camp" class="check">
-                    <label class="title" for="password">Senha:</label>
+                    <label class="title" for="password">Senha<span class="astimport">*</span>:</label>
                     <input class="campo title" type="password" id="password" name="password" required>
                 </div>
 
                 <div id="last-camp" class="check">
-                    <label class="title" for="password">Confirme a senha:</label>
+                    <label class="title" for="password">Confirme a senha<span class="astimport">*</span>:</label>
                     <input class="campo title" type="password" id="password" name="password" required>
                 </div>
-        
+
             </fieldset>
             <div id="option-contract" class="check">
-                <label class="title" for="contract" style="display: inline-flex;">Aceita os termos do contrato?
-                <input type="checkbox" class="custom-checkbox" id="contract" name="contract" value="sim">
+                <label class="title" for="contract" style="display: inline-flex;">Aceita os termos do contrato?<span
+                        class="astimport">*</span>
+                    <input type="checkbox" class="custom-checkbox" id="contract" name="contract" value="sim">
                 </label>
             </div>
             <!-- TERMOS -->
             <div id="termos">
                 <label for="confirm">TERMOS</label>
-                <p><small><span>Ao enviar este formulário você concorda automaticamente em participar de uma entrevista."<br>O login poderá ser realizado com email ou CPF.</span></small></p>
+                <p><small><span>Ao enviar este formulário você concorda automaticamente em participar de uma
+                            entrevista."<br>O login poderá ser realizado com email ou CPF.</span></small></p>
             </div>
             <!-- completar formulário -->
             <div class="check">
                 <!-- Reset -->
                 <input id="clear" style="display: inline-block;" type="reset" value="Limpar">
                 <!-- Login -->
-                <a href="index.html"><!-- futuro login --></a><input style="display: inline-block;" type="button" value="Já tenho uma conta!"></a>
+                <a href="index.html"><!-- futuro login --></a><input style="display: inline-block;" type="button"
+                    value="Já tenho uma conta!"></a>
                 <!-- 5 - envio de form -->
                 <input style="display: inline-block;" type="submit" value="Cadastrar" class="enviar">
             </div>
         </form>
     </div>
-   <!-- Metodo "get" do form é utilizado para receber ou buscar dados -->
-<footer>
-    <!--Footer Logo-->
-    <div class="footer-logo">
-        <p>
-            <a href="#inicio">
-                <img src="img/logotipo-white.png" alt="clinic-icon" />
-            </a>
-        </p>
-    </div>
-
-    <form id="contactFormu" action="https://formspree.io/f/xdkeeegn" method="POST">
-  
-                <h2>Contate-nos</h2>
-            
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email">
-            
-                <label for="cell-phone">Celular:</label>
-                <input type="tel" id="cell-phone" name="cell-phone">         
-            
-                <label for="name">Nome:</label>
-                <input type="text" id="name" name="name">
-            
-                <label for="message">Menssagem:</label>
-                <textarea class="desfoque" id="message" name="message"></textarea>        
-            
-                <button id="contact-buttom" type="submit">Enviar solicitação de contato</button>
-    </form>
-    <div id="formMessage"></div>
-    <div class="nebula"></div>
-    <div class="nebula nebula-1"></div>
-    <div class="nebula nebula-2"></div>
-    <div class="nebula nebula-3"></div>
-    <div id="messageModal" class="modal">
-        <div class="modal-content">
-            <p id="modalMessage"></p>
+    <!-- Metodo "get" do form é utilizado para receber ou buscar dados -->
+    <footer>
+        <!--Footer Logo-->
+        <div class="footer-logo">
+            <p>
+                <a href="#inicio">
+                    <img src="img/logotipo-white.png" alt="clinic-icon" />
+                </a>
+            </p>
         </div>
-    </div>
-    <script src="js/space-background.js"></script>
-    <script>
-        const form = document.getElementById('contactFormu');
-        const formMessage = document.getElementById('formMessage');
 
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
+        <form id="contactFormu" action="https://formspree.io/f/xdkeeegn" method="POST">
 
-            fetch(form.action, {
-                method: 'POST',
-                body: new FormData(form),
-                headers: {
-                    'Accept': 'application/json'
-                }
-            })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.ok) {
-                        formMessage.innerHTML = "Mensagem enviada com sucesso!";
-                        form.reset();
-                    } else {
-                        formMessage.innerHTML = "Ocorreu um erro. Por favor, tente novamente.";
+            <h2>Contate-nos</h2>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+
+            <label for="cell-phone">Celular:</label>
+            <input type="tel" id="cell-phone" name="cell-phone">
+
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name">
+
+            <label for="message">Menssagem:</label>
+            <textarea class="desfoque" id="message" name="message"></textarea>
+
+            <button id="contact-buttom" type="submit">Enviar solicitação de contato</button>
+        </form>
+        <div id="formMessage"></div>
+        <div class="nebula"></div>
+        <div class="nebula nebula-1"></div>
+        <div class="nebula nebula-2"></div>
+        <div class="nebula nebula-3"></div>
+        <div id="messageModal" class="modal">
+            <div class="modal-content">
+                <p id="modalMessage"></p>
+            </div>
+        </div>
+        <script src="js/space-background.js"></script>
+        <script>
+            const form = document.getElementById('contactFormu');
+            const formMessage = document.getElementById('formMessage');
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: {
+                        'Accept': 'application/json'
                     }
                 })
-                .catch(error => {
-                    formMessage.innerHTML = "Ocorreu um erro. Por favor, tente novamente.";
-                });
-        });
-    </script>
-    <!-- scripts end -->
-    <!--End Footer Logo-->
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.ok) {
+                            formMessage.innerHTML = "Mensagem enviada com sucesso!";
+                            form.reset();
+                        } else {
+                            formMessage.innerHTML = "Ocorreu um erro. Por favor, tente novamente.";
+                        }
+                    })
+                    .catch(error => {
+                        formMessage.innerHTML = "Ocorreu um erro. Por favor, tente novamente.";
+                    });
+            });
+        </script>
+        <!-- scripts end -->
+        <!--End Footer Logo-->
 
-    <div id="footend-color">
-        <!-- SEGURANÇA -->
-        <p><small id="ocult">quipados com tecnologia de ponta e uma equipe dedicada - garantimos o cuidado e a saúde
-                de nossos pacientes em cada atendimento. - <q>Sua saúde é nossa prioridade!</q> - <span>Clínica
-                    Viver Bem</span>.</small></p>
-        <!-- SEGURANÇA -->
+        <div id="footend-color">
+            <!-- SEGURANÇA -->
+            <p><small id="ocult">quipados com tecnologia de ponta e uma equipe dedicada - garantimos o cuidado e a saúde
+                    de nossos pacientes em cada atendimento. - <q>Sua saúde é nossa prioridade!</q> - <span>Clínica
+                        Viver Bem</span>.</small></p>
+            <!-- SEGURANÇA -->
 
-        <!-- Copyright -->
-        <p id="contact-us" class="copyright">
-            &copy; 2025 <a><b class="color">Dev. Alan Marques</b></a>. Todos os direitos reservados.
-        </p>
-        <!-- Copyright -->
-    </div>
-</footer>
+            <!-- Copyright -->
+            <p id="contact-us" class="copyright">
+                &copy; 2025 <a><b class="color">Dev. Alan Marques</b></a>. Todos os direitos reservados.
+            </p>
+            <!-- Copyright -->
+            <button id="acessibilidade-btn" class="acessibilidade-btn">♿</button>
+
+            <button class="cancelreading" style=" border: none;
+        outline: none;" onclick="cancelarLeitura()">❌</button>
+            <div id="acessibilidade-menu" class="acessibilidade-menu">
+                <button style=" border: none;
+        outline: none;" onclick="alterarFonte('+')">A+</button>
+                <button style=" border: none;
+        outline: none;" onclick="alterarFonte('-')">A-</button>
+                <button style=" border: none;
+        outline: none;" onclick="modoAltoContraste()">Alto Contraste</button>
+                <button style=" border: none;
+        outline: none;" onclick="leituraTexto()">Leitor de Texto</button>
+            </div>
+            <!-- Script Acessibilidade -->
+            <script src="js/acessibilidade.js"></script>
+            <!-- End Script Acessibilidade  -->
+        </div>
+    </footer>
 </body>
+
 </html>

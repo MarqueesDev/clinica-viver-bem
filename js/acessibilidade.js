@@ -64,9 +64,12 @@ document.addEventListener('DOMContentLoaded', function () {
   carregarAutocontraste();
 });
 
+// Variável para controlar a leitura em voz alta
+let leituraEmAndamento = false;
+let speech = null;
 
-// Variável para controlar se a leitura já foi realizada
-let leituraRealizada = false;
+// Variável para controlar a visibilidade do botão
+let leitorRodando = false;
 
 // Leitura em voz alta do conteúdo do site
 function leituraTexto() {
@@ -74,5 +77,94 @@ function leituraTexto() {
   let speech = new SpeechSynthesisUtterance(texto);
   speech.lang = 'pt-BR';
   speech.rate = 1;
+  speech.onend = function () {
+    // Permitir que o usuário interaja com a página novamente
+    document.body.style.pointerEvents = 'auto';
+  };
   window.speechSynthesis.speak(speech);
+  // Bloquear a interação com a página enquanto a leitura está em andamento
+  document.body.style.pointerEvents = 'none';
+  fecharMenuAcessibilidade();
+  leitorRodando = true;
+  document.querySelector('.cancelreading').style.display = 'block';
 }
+
+// Função para cancelar a leitura em voz alta
+function cancelarLeitura() {
+  let botao = document.querySelector(".cancelreading");
+  // Esconder suavemente o botão
+  botao.style.opacity = "0";
+  botao.style.visibility = "hidden";
+  if (speech !== null) {
+    window.speechSynthesis.cancel();
+    leituraEmAndamento = false;
+    leitorRodando = false;
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  let botao = document.querySelector("#acessibilidade-btn");
+
+  // Garante que o botão fique sempre visível e clicável
+  botao.style.opacity = "1";
+  botao.style.visibility = "visible";
+  botao.style.display = "block";
+  botao.style.zIndex = "1";
+  botao.style.pointerEvents = "auto";
+
+  // Se precisar, reatribui o evento de clique
+  botao.onclick = function () {
+    console.log("Botão de acessibilidade clicado!");
+  };
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  let botoesAcessibilidade = document.querySelectorAll("#acessibilidade-menu button");
+  let botaoCancelarLeitura = document.querySelector(".cancelreading");
+
+  botoesAcessibilidade.forEach(botao => {
+    // Garante que os botões fiquem visíveis e clicáveis
+    botao.style.opacity = "1";
+    botao.style.visibility = "visible";
+    botao.style.display = "inline-block";
+    botao.style.zIndex = "1";
+    botao.style.pointerEvents = "auto";
+
+    // Reatribui o evento de clique conforme a função de cada botão
+    if (botao.innerText === "A+") {
+      botao.onclick = function () {
+        alterarFonte('+');
+        console.log("Aumentar fonte clicado!");
+      };
+    } else if (botao.innerText === "A-") {
+      botao.onclick = function () {
+        alterarFonte('-');
+        console.log("Diminuir fonte clicado!");
+      };
+    } else if (botao.innerText === "Alto Contraste") {
+      botao.onclick = function () {
+        modoAltoContraste();
+        console.log("Modo alto contraste ativado!");
+      };
+    } else if (botao.innerText === "Leitor de Texto") {
+      botao.onclick = function () {
+        leituraTexto();
+        console.log("Leitor de texto ativado!");
+
+        // Se o leitor estiver rodando, mostrar o botão "Cancelar Leitura"
+        if (leitorRodando) {
+          botaoCancelarLeitura.style.opacity = "1";
+          botaoCancelarLeitura.style.visibility = "visible";
+          botaoCancelarLeitura.style.display = "inline-block";
+        }
+      };
+    }
+  });
+
+  // Caso o leitor esteja rodando ao abrir o menu, mostrar o botão de cancelar leitura
+  if (leitorRodando) {
+    botaoCancelarLeitura.style.opacity = "1";
+    botaoCancelarLeitura.style.visibility = "visible";
+    botaoCancelarLeitura.style.display = "inline-block";
+  }
+});

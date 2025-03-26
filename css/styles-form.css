@@ -249,3 +249,9 @@ margin: 0 10px 10px 10px;
 position: relative;
 padding-left: 30px;
 }
+
+/* STYLE ASTERISCO IMPORTANT */
+
+.astimport {
+    color: rgb(202, 0, 0);
+}
