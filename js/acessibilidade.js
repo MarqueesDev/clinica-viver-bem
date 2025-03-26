@@ -70,18 +70,9 @@ let leituraRealizada = false;
 
 // Leitura em voz alta do conteúdo do site
 function leituraTexto() {
-  if (!leituraRealizada) {
-    let texto = document.body.innerText;
-    // Excluir os elementos com a classe "ignorar-leitura"
-    let elementosIgnorar = document.querySelectorAll('.ignorar-leitura');
-    elementosIgnorar.forEach(elemento => {
-      texto = texto.replace(elemento.outerHTML, '');
-    });
-    let speech = new SpeechSynthesisUtterance(texto);
-    speech.lang = 'pt-BR';
-    speech.rate = 1;
-    window.speechSynthesis.speak(speech);
-    leituraRealizada = true; 
-    fecharMenuAcessibilidade();
-  }
+  let texto = document.body.innerText;
+  let speech = new SpeechSynthesisUtterance(texto);
+  speech.lang = 'pt-BR';
+  speech.rate = 1;
+  window.speechSynthesis.speak(speech);
 }
