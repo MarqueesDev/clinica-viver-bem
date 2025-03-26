@@ -55,15 +55,17 @@
 </head>
 
 <body id="inicio">
-    <button id="acessibilidade-btn" class="acessibilidade-btn">♿</button>
+    <button id="acessibilidade-btn" class="acessibilidade-btn ignorar-leitura">♿</button>
 
-    <div id="acessibilidade-menu" class="acessibilidade-menu">
+    <div id="acessibilidade-menu" class="acessibilidade-menu ignorar-leitura">
         <button style=" border: none;
     outline: none;" onclick="alterarFonte('+')">A+</button>
         <button style=" border: none;
     outline: none;" onclick="alterarFonte('-')">A-</button>
         <button style=" border: none;
     outline: none;" onclick="modoAltoContraste()">Alto Contraste</button>
+        <button style=" border: none;
+    outline: none;" onclick="leituraTexto()">leituraTexto</button>
     </div>
     <!-- Script Acessibilidade -->
     <script src="js/acessibilidade.js"></script>
