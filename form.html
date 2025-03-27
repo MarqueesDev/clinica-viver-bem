@@ -162,12 +162,12 @@
             </p>
         </div>
 
-        <form id="contactFormu" action="https://formspree.io/f/xdkeeegn" method="POST">
+        <form id="contactFormu" action="https://formspree.io/f/xdkeeegn" method="POST" onsubmit="return validarFormulario()">
 
             <h2>Contate-nos</h2>
 
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
+            <input type="email" id="email" name="email" >
 
             <label for="cell-phone">Celular:</label>
             <input type="tel" id="cell-phone" name="cell-phone">
@@ -181,16 +181,12 @@
             <button id="contact-buttom" type="submit">Enviar solicitação de contato</button>
         </form>
         <div id="formMessage"></div>
-        <div class="nebula"></div>
-        <div class="nebula nebula-1"></div>
-        <div class="nebula nebula-2"></div>
-        <div class="nebula nebula-3"></div>
         <div id="messageModal" class="modal">
             <div class="modal-content">
                 <p id="modalMessage"></p>
             </div>
         </div>
-        <script src="js/space-background.js"></script>
+        <script src="js/notification-background.js"></script>
         <script>
             const form = document.getElementById('contactFormu');
             const formMessage = document.getElementById('formMessage');
@@ -224,15 +220,19 @@
 
         <div id="footend-color">
             <!-- SEGURANÇA -->
-            <p><small id="ocult">quipados com tecnologia de ponta e uma equipe dedicada - garantimos o cuidado e a saúde
+            <p><small id="ocult">Equipados com tecnologia de ponta e uma equipe dedicada - garantimos o cuidado e a saúde
                     de nossos pacientes em cada atendimento. - <q>Sua saúde é nossa prioridade!</q> - <span>Clínica
                         Viver Bem</span>.</small></p>
             <!-- SEGURANÇA -->
 
             <!-- Copyright -->
             <p id="contact-us" class="copyright">
-                &copy; 2025 <a><b class="color">Dev. Alan Marques</b></a>. Todos os direitos reservados.
+                &copy; 2025 <a><b class="color">Dev. Alan Marques</b></a>,
+                <a><b class="color">Dev. Mateus Vasconcelos </b></a> &amp;
+                <a><b class="color">Dev. João Horta</b></a>.
+                Todos os direitos reservados.
             </p>
+            <span id="finaliza-leitor" style="display: hidden;"></span>
             <!-- Copyright -->
             <button id="acessibilidade-btn" class="acessibilidade-btn">♿</button>
 

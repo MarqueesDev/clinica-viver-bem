@@ -127,6 +127,7 @@ input[type="submit"]:active {
 #modalMessage {
     margin: 0;
     font-size: 16px;
+    padding: 10px 0px;
 }
 
 .close {
@@ -378,5 +379,17 @@ input[type="submit"]:active {
     border: none;
     outline: none;
 }
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
 
 /* END ACESSIBILIDADE BUTTON */
