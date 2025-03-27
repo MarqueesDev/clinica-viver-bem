@@ -73,39 +73,6 @@ form.addEventListener('submit', function (e) {
             showModal("Ocorreu um erro. Por favor,aguarde um pouco e tente novamente.");
         });
 
-    // if (!validarFormulario()) {
-    // } else if (data.ok) {
-    //     modalMessage.style.color = "#2ecc71";
-    //     showModal("Mensagem enviada com sucesso!");
-    //     form.reset();
-    // } else {
-    //     modalMessage.style.color = "#e74c3c";
-    //     showModal("Ocorreu um erro. Por favor, verifique se os campos estão preenchidos corretamente e tente novamente.");
-    // }
-
-
-
-
-
-
-
-    //         if (data.ok) {
-    //             modalMessage.style.color = "#2ecc71";
-    //             showModal("Mensagem enviada com sucesso!");
-    //             form.reset();
-    //         } else if (!validarFormulario()){
-    //         }else {
-    //             modalMessage.style.color = "#e74c3c";
-    //             showModal("Ocorreu um erro. Por favor verifique se os campos estão preenchidos corretamente e tente novamente.");
-    //         }
-    //     })
-    //     .catch(error => {
-    //         console.error(error);
-    //         modalMessage.style.color = "#e74c3c";
-    //         showModal("Ocorreu um erro. Por favor,aguarde um pouco e tente novamente.");
-    //     });
-    // });
-
     function showModal(message) {
         modalMessage.textContent = message;
         modal.style.display = "block";
