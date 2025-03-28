@@ -208,7 +208,7 @@
             <label for="name">Nome:</label>
             <input type="text" id="name" name="name" required>
 
-            <label for="message">Mensagem:</label>
+            <label for="message">Menssagem:</label>
             <textarea class="desfoque" id="message" name="message" required></textarea>
 
             <button id="contact-buttom" type="submit">Enviar solicitação de contato</button>
@@ -258,6 +258,7 @@
                         Viver Bem</span>.</small></p>
             <!-- SEGURANÇA -->
 
+            
             <!-- Copyright -->
             <p id="contact-us" class="copyright">
                 &copy; 2025 <a><b class="color">Dev. Alan Marques</b></a>,
@@ -266,6 +267,17 @@
                 Todos os direitos reservados.
             </p>
             <!-- Copyright -->
+            
+            <!-- TRANSLATE -->
+            <div id="google_translate_element" style="z-index: 8; display: flex; justify-content: center; align-items: center;" ></div>  
+            <script type="text/javascript">
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({pageLanguage: 'pt', includedLanguages: 'pt-BR, en,es,fr,de,it,pt,ru,zh-CN,ja,ko,ar,hi'}, 'google_translate_element');
+            }
+            </script>
+            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+            <!-- END TRANSLATE -->
+
             <button id="acessibilidade-btn" class="acessibilidade-btn">♿</button>
 
             <button class="cancelreading" style=" border: none; outline: none;" onclick="cancelarLeitura()">❌</button>
