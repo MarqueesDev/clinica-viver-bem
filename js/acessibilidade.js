@@ -89,7 +89,7 @@ function leituraTexto() {
 
   let speech = new SpeechSynthesisUtterance(texto);
   speech.lang = 'pt-BR';
-  speech.rate = 5;
+  speech.rate = 1;
   speech.onend = function () {
     // Permitir que o usuário interaja com a página novamente
     document.body.style.pointerEvents = 'none';
