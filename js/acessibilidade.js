@@ -89,10 +89,10 @@ function leituraTexto() {
 
   let speech = new SpeechSynthesisUtterance(texto);
   speech.lang = 'pt-BR';
-  speech.rate = 1;
+  speech.rate = 5;
   speech.onend = function () {
     // Permitir que o usuário interaja com a página novamente
-    document.body.style.pointerEvents = 'auto';
+    document.body.style.pointerEvents = 'none';
     cancelarLeitura()
   };
   window.speechSynthesis.speak(speech);
@@ -110,10 +110,11 @@ function cancelarLeitura() {
   botao.style.opacity = "0";
   botao.style.visibility = "hidden";
   if (speech !== null) {
-    window.speechSynthesis.cancel();
+    window.speechSynthesis.cancel(speech);
     leituraEmAndamento = false;
     leitorRodando = false;
   }
+  document.body.style.pointerEvents = 'all'; //adicionado para que o site fique disponivel para alteração novamente
 }
 
 document.addEventListener("DOMContentLoaded", function () {
