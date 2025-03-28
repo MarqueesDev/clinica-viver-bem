@@ -392,3 +392,72 @@ input[type="submit"]:active {
 }
 
 /* END ACESSIBILIDADE BUTTON */
+
+/* translator */
+
+.skiptranslate {
+    color: transparent !important;
+    z-index: 1 !important;
+}
+
+
+/* end translator */
+
+
+.goog-te-combo {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/300/300226.png') !important;
+    background-position: center !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    width: 32px !important;
+    height: 32px !important;
+    border: none !important;
+    outline: none !important;
+    z-index: 1 !important;
+}
+
+/* Personaliza o <div> que envolve o seletor de idioma */
+#\:0\.targetLanguage {
+    background-color: transparent !important;  /* Fundo transparente */
+    border: none !important;  /* Remove a borda */
+    padding: 0 !important;  /* Remove o preenchimento */
+    margin: 0 !important;  /* Remove a margem */
+    display: inline-block;  /* Garante que o elemento fique na linha com outros elementos */
+    z-index: 1 !important;
+    width: 32px !important;
+    height: 30px !important;
+}
+
+/* Personaliza o <select> do widget */
+#\:0\.targetLanguage select.goog-te-combo {
+    all: unset;  /* Remove todos os estilos aplicados ao elemento */
+    background-color: transparent !important;  /* Fundo transparente */
+    font-size: 0% !important;  /* Tamanho da fonte */
+    border: transparent none !important;
+    border-radius: 5px !important;  /* Bordas arredondadas */
+    width: 10px !important;
+    padding: 0px 10px !important;
+    cursor: pointer;  /* Muda o cursor para indicar interatividade */
+    z-index: 1 !important;
+}
+
+#\:0\.targetLanguage select.goog-te-combo option[value=""]:first-child {
+    display: none !important;  /* Oculta o primeiro option */
+    z-index: 1 !important;
+}
+
+/* Estiliza as opções dentro do <select> */
+#\:0\.targetLanguage select.goog-te-combo option {
+    background-color: transparent !important;  /* Fundo transparente */
+    padding: 10px 10px !important;  /* Espaçamento interno das opções */
+    font-size: 14px !important;  /* Tamanho da fonte das opções */
+    color: #333 !important;  /* Cor do texto das opções */
+    z-index: 1 !important;
+}
+
+/* Altera a cor da opção selecionada */
+#\:0\.targetLanguage select.goog-te-combo option:checked {
+    background-color: rgb(78, 78, 78) !important;  /* Fundo transparente */
+    color: #ffffff !important;  /* Cor do texto da opção selecionada */
+    z-index: 1 !important;
+}

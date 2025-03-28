@@ -40,6 +40,7 @@
                     <li><a href="index.html#sobre">Sobre</a></li>
                     <li><a href="form.html#cadastrar" id="nav-login">Cadastrar</a></li>
                     <li><a href="form.html#contact-us">Contato</a></li>
+                    <li id="translate-position"><div id="google_translate_element" style="z-index: 8; text-align: center;"></div></li>
                 </ul>
             </div>
         </div>
@@ -251,6 +252,18 @@
             <!-- Script Acessibilidade -->
             <script src="js/acessibilidade.js"></script>
             <!-- End Script Acessibilidade  -->
+            <script type="text/javascript">
+                function googleTranslateElementInit() {
+                    new google.translate.TranslateElement({
+                        pageLanguage: 'pt', // Idioma da página
+                        includedLanguages: 'en,es,fr,de,pt' // Lista de idiomas incluídos, sem a vírgula extra
+                    }, 'google_translate_element');
+                }
+
+            </script>
+            <script type="text/javascript"
+                src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+                </script>
         </div>
     </footer>
 </body>
