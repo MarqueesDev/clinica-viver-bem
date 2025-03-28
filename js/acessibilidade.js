@@ -4,6 +4,16 @@ document.getElementById("acessibilidade-btn").addEventListener("click", function
   menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
 });
 
+// **NOVO CÓDIGO** - Adicionar evento de clique no documento para fechar o menu quando clicar fora dele
+document.addEventListener('click', function(event) {
+  let menuAcessibilidade = document.getElementById('acessibilidade-menu');
+  let botaoAcessibilidade = document.getElementById('acessibilidade-btn');
+
+  if (menuAcessibilidade.style.display === 'flex' && !menuAcessibilidade.contains(event.target) && event.target !== botaoAcessibilidade) {
+    fecharMenuAcessibilidade();
+  }
+});
+
 // Função para fechar o menu de acessibilidade
 function fecharMenuAcessibilidade() {
   document.getElementById("acessibilidade-menu").style.display = "none";
