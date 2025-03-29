@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <!-- Logo da clínica -->
+                <img src="only_logotipo-white.png" alt="Clinica Viver Bem" class="logo">
+                <h2>Login</h2>
+            </div>
+            <form>
+                <div class="input-group">
+                    <i class="icon-user"></i>
+                    <input type="email" placeholder="Usuário" required>
+                </div>
+                <div class="input-group">
+                    <i class="icon-lock"></i>
+                    <input type="password" placeholder="Senha" required>
+                </div>
+                <div class="remember-me">
+                    <input type="checkbox" id="remember">
+                    <label for="remember">Manter-me logado</label>
+                </div>
+                <button type="submit" class="btn-login">Entrar</button>
+            </form>
+            <div class="register-link">
+                <p>Ainda não tem conta? <a href="cadastro.html">Cadastre-se</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contato e Acessibilidade -->
+    <footer class="footer">
+        <p class="copyright">
+            &copy; 2025 <b>Dev. Alan Marques</b>, <b>Dev. Mateus Vasconcelos</b> & <b>Dev. João Horta</b>.
+            Todos os direitos reservados.
+        </p>
+
+        <button id="acessibilidade-btn" class="acessibilidade-btn">♿</button>
+        <button class="cancelreading" onclick="cancelarLeitura()">❌</button>
+
+        <div id="acessibilidade-menu" class="acessibilidade-menu">
+            <button onclick="alterarFonte('+')">A+</button>
+            <button onclick="alterarFonte('-')">A-</button>
+            <button onclick="modoAltoContraste()">Alto Contraste</button>
+            <button onclick="leituraTexto()">Leitor de Texto</button>
+        </div>
+
+        <script src="js/acessibilidade.js"></script>
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({
+                    pageLanguage: 'pt',
+                    includedLanguages: 'en,es,fr,de,pt'
+                }, 'google_translate_element');
+            }
+        </script>
+        <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    </footer>
+
+</body>
+</html>
