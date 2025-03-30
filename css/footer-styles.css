@@ -32,7 +32,11 @@ footer p #ocult span {
 }
 
 .footer-logo {
-  padding-bottom: 10px;
+padding-bottom: 10px;
+}
+
+.footer-logo {
+padding-bottom: 900px;
 }
 
 .footer-logo a{
