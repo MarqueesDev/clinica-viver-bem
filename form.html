@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulários</title>
 
+    <!-- link icons google -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
     <!-- link icons -->
     <link rel="shortcut icon" href="img/clinic-icon.png" type="image/x-icon">
     <link rel="stylesheet"
@@ -21,7 +27,8 @@
     <link rel="stylesheet" href="css/modal-style.css">
     <link rel="stylesheet" href="css/styles.css">
 
-
+    <!-- PRELOAD -->
+    <link rel="preload" as="image" href="img/*" type="image/jpeg">
 
     <!-- script -->
     <script src="js/dropdown-script.js"></script>
@@ -34,14 +41,15 @@
         <!-- Barra de navegação pelo site -->
         <div class="nav-menu singlepage-nav">
             <div class="nav-menu-inner-top">
-                <p><img src="img/only_logotipo-white.png" alt="logotipo-clinica"></p>
+                <p><img src="img/only_logotipo-white.png" alt="logotipo-clinici"></p>
                 <ul class="nav-menu-inner">
-                    <li><a href="index.html#inicio">Início</a></li>
+                    <li><a href="index.html">Início</a></li>
                     <li><a href="index.html#sobre">Sobre</a></li>
                     <li><a href="login.html">Login</a></li>
-                    <li><a href="form.html#cadastrar" id="nav-login">Cadastrar</a></li>
-                    <li><a href="form.html#contact-us">Contato</a></li>
-                    <li id="translate-position"><div id="google_translate_element" style="z-index: 8; text-align: center;"></div></li>
+                    <li><a href="#contact-us">Contato</a></li>
+                    <li id="translate-position">
+                        <div id="google_translate_element" style="z-index: 8; text-align: center;"></div>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -57,15 +65,112 @@
             <!-- O menu dropdown -->
             <div class="dropdown" id="dropdown">
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <li><a class="dropdown-item" href="index.html#inicio">Início</a></li>
-                    <li><a class="dropdown-item" href="index.html#sobre">Sobre</a></li>
+                    <li><a class="dropdown-item" href="#inicio">Início</a></li>
+                    <li><a class="dropdown-item" href="#sobre">Sobre</a></li>
                     <li><a class="dropdown-item" href="login.html">Login</a></li>
-                    <li><a class="dropdown-item" href="form.html#cadastrar" id="nav-login">Cadastrar</a></li>
-                    <li><a class="dropdown-item" href="form.html">Contato</a></li>
+                    <li><a class="dropdown-item" href="#contact-us">Contato</a></li>
+                    <li id="dropdown-item">
+                        <div id="google_translate_element" style="z-index: 8; text-align: center;"></div>
+                    </li>
                 </ul>
             </div>
         </div>
     </header>
+    <main>
+        <span id="cadastrar"></span>
+        <div class="bg-citation">
+            <div class="citation-title">
+                <!-- Título do site -->
+                <div class="citation-title-position">
+                    <h1 style="text-transform: uppercase;">Clínica Viver Bem</h1>
+                    <!-- Citação principal -->
+                    <blockquote>
+                        <q>Foco na saúde e bem-estar</q>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="all">
+        <form id="formClic" action="register.php" method="post">
+            <fieldset id="border-fset" class="check" style="margin: 30px;">
+                <legend class="spaceline title">Preencha as suas informações pessoais</legend>
+
+                <label class="title" for="f-name">Nome<span class="astimport">*</span>:</label>
+                <input class="campo title" type="text" id="f-name" name="f-name" required>
+
+                <label class="title" for="l-name">Sobrenome<span class="astimport">*</span>:</label>
+                <input class="campo title" type="text" id="l-name" name="l-name" required>
+
+                <label class="title" for="email-cadastro">Email<span class="astimport">*</span>:</label>
+                <input class="campo title" type="email" id="email-cadastro" name="email-cadastro" autocomplete="email"
+                    required>
+
+                <label class="title" for="cpf">CPF<span class="astimport">*</span>:</label>
+                <input class="campo title" type="number" id="cpf" name="cpf" placeholder="123.456.789-12" required>
+
+                <label class="title" for="endereco-cadastro">Endereço<span class="astimport">*</span>:</label>
+                <input class="campo title" type="text" id="endereco-cadastro" name="endereco-cadastro"
+                    autocomplete="endereco" required>
+
+                <label class="title" for="tel">Telefone<span class="astimport">*</span>:</label>
+                <input class="campo title" type="tel" id="tel" name="tel" autocomplete="tel-national"
+                    placeholder="(61) 9912341234" required>
+
+                <div>
+                    <label class="title" for="gen">Gênero<span class="astimport">*</span>:</label>
+                    <select class="campo title" id="gen" name="gen">
+                        <option value="programador">Masculino</option>
+                        <option value="professor">Feminino</option>
+                    </select>
+                </div>
+
+                <label class="title" id="age" class="title" for="birthday">Data de nascimento<span
+                        class="astimport">*</span>:</label>
+                <input class="campo title" type="date" id="birthday" name="birthday" required>
+
+                <div id="last-camp" class="check">
+                    <label class="title" for="password">Senha<span class="astimport">*</span>:</label>
+                    <input class="campo title" type="password" id="password" name="password" required>
+                </div>
+
+                <div id="last-camp" class="check">
+                    <label class="title" for="password">Confirme a senha<span class="astimport">*</span>:</label>
+                    <input class="campo title" type="password" id="password" name="password" required>
+                </div>
+
+            </fieldset>
+            <div id="option-contract" class="check">
+                <label class="title" for="contract" style="display: inline-flex;">Aceita os termos do contrato?<span
+                        class="astimport">*</span>
+                    <input type="checkbox" class="custom-checkbox" id="contract" name="contract" value="sim">
+                </label>
+            </div>
+            <!-- TERMOS -->
+            <div id="termos">
+                <label for="confirm">TERMOS</label>
+                <p><small><span>Ao enviar este formulário você concorda automaticamente em participar de uma
+                            entrevista."<br>O login poderá ser realizado com email ou CPF.</span></small></p>
+            </div>
+            <!-- completar formulário -->
+            <div class="check">
+                <!-- Reset -->
+                <input id="clear" style="display: inline-block;" type="reset" value="Limpar">
+            
+                <!-- Login -->
+                <a href="login.html">
+                    <input type="button" value="Já tenho uma conta!" class="botao-link">
+                </a>
+            
+                <!-- Cadastro -->
+                <a href="login.html">
+                    <input type="submit" value="Cadastrar" class="botao-link">
+                </a>
+            </div>            
+        </form>
+    </div>
+    <!-- Metodo "get" do form é utilizado para receber ou buscar dados -->
+    <footer>
         <!--Footer Logo-->
         <div class="footer-logo">
             <p>
@@ -75,12 +180,12 @@
             </p>
         </div>
 
-        <form id="contactFormu" action="https://formspree.io/f/xdkeeegn" method="POST" onsubmit="return validarFormulario()">
+        <form id="contactFormu" action="https://formspree.io/f/xdkeeegn" method="POST">
 
             <h2>Contate-nos</h2>
 
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" >
+            <input type="email" id="email" name="email">
 
             <label for="cell-phone">Celular:</label>
             <input type="tel" id="cell-phone" name="cell-phone">
@@ -88,18 +193,22 @@
             <label for="name">Nome:</label>
             <input type="text" id="name" name="name">
 
-            <label for="message">Mensagem:</label>
+            <label for="message">Menssagem:</label>
             <textarea class="desfoque" id="message" name="message"></textarea>
 
             <button id="contact-buttom" type="submit">Enviar solicitação de contato</button>
         </form>
         <div id="formMessage"></div>
+        <div class="nebula"></div>
+        <div class="nebula nebula-1"></div>
+        <div class="nebula nebula-2"></div>
+        <div class="nebula nebula-3"></div>
         <div id="messageModal" class="modal">
             <div class="modal-content">
                 <p id="modalMessage"></p>
             </div>
         </div>
-        <script src="js/notification-background.js"></script>
+        <script src="js/space-background.js"></script>
         <script>
             const form = document.getElementById('contactFormu');
             const formMessage = document.getElementById('formMessage');
@@ -133,19 +242,15 @@
 
         <div id="footend-color">
             <!-- SEGURANÇA -->
-            <p><small id="ocult">Equipados com tecnologia de ponta e uma equipe dedicada - garantimos o cuidado e a saúde
+            <p><small id="ocult">quipados com tecnologia de ponta e uma equipe dedicada - garantimos o cuidado e a saúde
                     de nossos pacientes em cada atendimento. - <q>Sua saúde é nossa prioridade!</q> - <span>Clínica
                         Viver Bem</span>.</small></p>
             <!-- SEGURANÇA -->
 
             <!-- Copyright -->
             <p id="contact-us" class="copyright">
-                &copy; 2025 <a><b class="color">Dev. Alan Marques</b></a>,
-                <a><b class="color">Dev. Mateus Vasconcelos </b></a> &amp;
-                <a><b class="color">Dev. João Horta</b></a>.
-                Todos os direitos reservados.
+                &copy; 2025 <a><b class="color">Dev. Alan Marques</b></a>. Todos os direitos reservados.
             </p>
-            <span id="finaliza-leitor" style="display: hidden;"></span>
             <!-- Copyright -->
             <button id="acessibilidade-btn" class="acessibilidade-btn">♿</button>
 

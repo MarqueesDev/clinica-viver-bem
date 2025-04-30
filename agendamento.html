@@ -1,43 +1,48 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agendamento</title>
-    
+
     <!-- link icons -->
     <link rel="shortcut icon" href="img/clinic-icon.png" type="image/x-icon">
     <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
     <!-- link styles -->
-        <link rel="stylesheet" href="css/styles-agendamento.css">
-        <link rel="stylesheet" href="css/styles-menu.css">
-        <link rel="stylesheet" href="css/styles-citation-form.css">
-        <link rel="stylesheet" href="css/styles-form.css">
-        <link rel="stylesheet" href="css/footer-styles.css">
-        <link rel="stylesheet" href="css/dropdown-style.css">
-        <link rel="stylesheet" href="css/modal-style.css">
-        <link rel="stylesheet" href="css/styles.css">
-        <link rel="stylesheet" href="css/style-agendamento.css">
-    
-    
-    
-        <!-- script -->
-        <script src="js/dropdown-script.js"></script>
+    <link rel="stylesheet" href="css/styles-agendamento.css">
+    <link rel="stylesheet" href="css/styles-menu.css">
+    <link rel="stylesheet" href="css/styles-citation-form.css">
+    <link rel="stylesheet" href="css/styles-form.css">
+    <link rel="stylesheet" href="css/footer-styles.css">
+    <link rel="stylesheet" href="css/dropdown-style.css">
+    <link rel="stylesheet" href="css/modal-style.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- PRELOAD -->
+    <link rel="preload" as="image" href="img/*" type="image/jpeg">
+
+    <!-- script -->
+    <script src="js/dropdown-script.js"></script>
 
 </head>
+
 <body>
+    <!-- Cabeçalho -->
     <header id="nav-sobreposition">
         <!-- Barra de navegação pelo site -->
         <div class="nav-menu singlepage-nav">
             <div class="nav-menu-inner-top">
-                <p><img src="img/only_logotipo-white.png" alt="logotipo-clinica"></p>
+                <p><img src="img/only_logotipo-white.png" alt="logotipo-clinici"></p>
                 <ul class="nav-menu-inner">
-                    <li><a href="index.html#inicio">Inicio</a></li>
+                    <li><a href="index.html#inicio">Início</a></li>
                     <li><a href="index.html#sobre">Sobre</a></li>
-                    <li><a href="form.html#cadastrar" id="nav-login">Cadastrar</a></li>
-                    <li><a href="form.html#contact-us">Contato</a></li>
+                    <li><a href="#contact-us">Contato</a></li>
+                    <li id="translate-position">
+                        <div id="google_translate_element" style="z-index: 8; text-align: center;"></div>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -53,10 +58,12 @@
             <!-- O menu dropdown -->
             <div class="dropdown" id="dropdown">
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <li><a class="dropdown-item" href="index.html#inicio">Início</a></li>
-                    <li><a class="dropdown-item" href="index.html#sobre">Sobre</a></li>
-                    <li><a class="dropdown-item" href="form.html#cadastrar" id="nav-login">Cadastrar</a></li>
-                    <li><a class="dropdown-item" href="form.html">Contato</a></li>
+                    <li><a class="dropdown-item" href="#inicio">Início</a></li>
+                    <li><a class="dropdown-item" href="#sobre">Sobre</a></li>
+                    <li><a class="dropdown-item" href="#contact-us">Contato</a></li>
+                    <li id="dropdown-item">
+                        <div id="google_translate_element" style="z-index: 8; text-align: center;"></div>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -79,34 +86,34 @@
     <div class="agenda-user">
         <section>
             <form>
-            <fieldset>
-                <legend>Agendamento</legend>
-            <label class="title" for="especializacao">Especialização<span class="astimport">*</span>:</label>
-            <select name="especializacao" id="especializacao" placeholder="Selecione">
-                <option value="cardiologia">Cardiologia</option>
-                <option value="demartologia">Demartologia</option>
-                <option value="endocrinologia">Endocrinologia</option>
-                <option value="ginecologia">Ginecologia</option>
-                <option value="ortopedia">Ortopedia</option>
-                <option value="pediatria">Pediatria</option>
-            </select>
-            <label class="title" for="especialista">Especialista<span class="astimport">*</span>:</label>
-            <select name="especialista" id="especialista">
-                <option value="draalmeida">Dra. Almeida</option>
-                <option value="droliveira">Dr. Oliveira</option>
-                <option value="drcosta">Dr. Costa</option>
-                <option value="drasouza">Dra. Souza</option>
-                <option value="drferreira">Dr. Ferreira</option>
-                <option value="dralima">Dra. Lima</option>
-            </select>
-            <label class="title" for="consulta">Data da consulta<span class="astimport">*</span>:</label>
-            <input type="date" id="consulta" name="consulta">
-            <label class="title" for="horario">Horario<span class="astimport">*</span>:</label>
-            <input type="time" id="horario" name="horario">
-            <button>Agendar</button>
-            </fieldset>
+                <fieldset>
+                    <legend>Agendamento</legend>
+                    <label class="title" for="especializacao">Especialização<span class="astimport">*</span>:</label>
+                    <select name="especializacao" id="especializacao" placeholder="Selecione">
+                        <option value="cardiologia">Cardiologia</option>
+                        <option value="demartologia">Demartologia</option>
+                        <option value="endocrinologia">Endocrinologia</option>
+                        <option value="ginecologia">Ginecologia</option>
+                        <option value="ortopedia">Ortopedia</option>
+                        <option value="pediatria">Pediatria</option>
+                    </select>
+                    <label class="title" for="especialista">Especialista<span class="astimport">*</span>:</label>
+                    <select name="especialista" id="especialista">
+                        <option value="draalmeida">Dra. Almeida</option>
+                        <option value="droliveira">Dr. Oliveira</option>
+                        <option value="drcosta">Dr. Costa</option>
+                        <option value="drasouza">Dra. Souza</option>
+                        <option value="drferreira">Dr. Ferreira</option>
+                        <option value="dralima">Dra. Lima</option>
+                    </select>
+                    <label class="title" for="consulta">Data da consulta<span class="astimport">*</span>:</label>
+                    <input type="date" id="consulta" name="consulta">
+                    <label class="title" for="horario">Horario<span class="astimport">*</span>:</label>
+                    <input type="time" id="horario" name="horario">
+                    <button>Agendar</button>
+                </fieldset>
             </form>
-            
+
         </section>
     </div>
     <footer>
@@ -119,12 +126,13 @@
             </p>
         </div>
 
-        <form id="contactFormu" action="https://formspree.io/f/xdkeeegn" method="POST" onsubmit="return validarFormulario()">
+        <form id="contactFormu" action="https://formspree.io/f/xdkeeegn" method="POST"
+            onsubmit="return validarFormulario()">
 
             <h2>Contate-nos</h2>
 
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" >
+            <input type="email" id="email" name="email">
 
             <label for="cell-phone">Celular:</label>
             <input type="tel" id="cell-phone" name="cell-phone">
@@ -177,7 +185,8 @@
 
         <div id="footend-color">
             <!-- SEGURANÇA -->
-            <p><small id="ocult">Equipados com tecnologia de ponta e uma equipe dedicada - garantimos o cuidado e a saúde
+            <p><small id="ocult">Equipados com tecnologia de ponta e uma equipe dedicada - garantimos o cuidado e a
+                    saúde
                     de nossos pacientes em cada atendimento. - <q>Sua saúde é nossa prioridade!</q> - <span>Clínica
                         Viver Bem</span>.</small></p>
             <!-- SEGURANÇA -->
@@ -208,7 +217,20 @@
             <!-- Script Acessibilidade -->
             <script src="js/acessibilidade.js"></script>
             <!-- End Script Acessibilidade  -->
+            <script type="text/javascript">
+                function googleTranslateElementInit() {
+                    new google.translate.TranslateElement({
+                        pageLanguage: 'pt', // Idioma da página
+                        includedLanguages: 'en,es,fr,de,pt' // Lista de idiomas incluídos, sem a vírgula extra
+                    }, 'google_translate_element');
+                }
+
+            </script>
+            <script type="text/javascript"
+                src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+                </script>
         </div>
     </footer>
 </body>
+
 </html>

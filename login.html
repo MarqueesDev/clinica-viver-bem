@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    
+
     <!-- FAVICON -->
     <link rel="shortcut icon" href="img/clinic-icon.png" type="image/x-icon">
 
@@ -21,94 +22,87 @@
     <link rel="stylesheet" href="css/styles-citation.css">
     <link rel="stylesheet" href="css/styles-main.css">
     <link rel="stylesheet" href="css/buymenu-styles.css">
-    <link rel="stylesheet" href="css/footer-styles.css">
     <link rel="stylesheet" href="css/body-styles.css">
     <link rel="stylesheet" href="css/dropdown-style.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/styles-login.css">
-    
-    <!-- PRELOAD -->
 
-    <link rel="preload" as="image" href="img/bgview-clinic.jpg" type="image/jpeg">
-    <link rel="preload" as="image" href="img/cardiology.jpg" type="image/jpeg">
-    <link rel="preload" as="image" href="img/ClinicaIA.jpg" type="image/jpeg">
-    <link rel="preload" as="image" href="img/ClinicaIA.png" type="image/jpeg">
-    <link rel="preload" as="image" href="img/dermatology.jpg" type="image/jpeg">
-    <link rel="preload" as="image" href="img/endocrinology.jpg" type="image/jpeg">
-    <link rel="preload" as="image" href="img/ginecology.jpg" type="image/jpeg">
-    <link rel="preload" as="image" href="img/logotipo-white.png" type="image/jpeg">
-    <link rel="preload" as="image" href="img/only_logotipo-white.png" type="image/jpeg">
-    <link rel="preload" as="image" href="img/ortopedy.jpg" type="image/jpeg">
-    <link rel="preload" as="image" href="img/pediatry.jpg" type="image/jpeg">
-    <link rel="preload" as="image" href="img/post-header.jpg" type="image/jpeg">
-
+    <!-- script -->
+    <script src="js/dropdown-script.js"></script>
 
     <!-- script -->
     <script src="js/dropdown-script.js"></script>
 
 </head>
-<body>
-        <!-- Cabeçalho -->
-        <header id="nav-sobreposition">
-            <!-- Barra de navegação pelo site -->
-            <div class="nav-menu singlepage-nav">
-                <div class="nav-menu-inner-top">
-                    <p><img src="img/only_logotipo-white.png" alt="logotipo-clinica"></p>
-                    <ul class="nav-menu-inner">
-                        <li><a href="index.html#inicio">Início</a></li>
-                        <li><a href="index.html#sobre">Sobre</a></li>
-                        <li><a href="login.html">Login</a></li>
-                        <li><a href="form.html#cadastrar" id="nav-login">Cadastrar</a></li>
-                        <li><a href="form.html#contact-us">Contato</a></li>
-                        <li id="translate-position"><div id="google_translate_element" style="z-index: 8; text-align: center;"></div></li>
-                    </ul>
-                </div>
-            </div>
-    
-            <div class="nav-menu-dropdown">
-                <!-- Ícone do menu -->
-                <div class="menu-icon">
-                    <span class="material-symbols-outlined menu-icon-open">menu</span>
-                    <span class="material-symbols-outlined menu-icon-close" style="display: none;">close</span>
-                </div>
-    
-    
-                <!-- O menu dropdown -->
-                <div class="dropdown" id="dropdown">
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <li><a class="dropdown-item" href="index.html#inicio">Início</a></li>
-                        <li><a class="dropdown-item" href="index.html#sobre">Sobre</a></li>
-                        <li><a class="dropdown-item" href="login.html">Login</a></li>
-                        <li><a class="dropdown-item" href="form.html#cadastrar" id="nav-login">Cadastrar</a></li>
-                        <li><a class="dropdown-item" href="form.html">Contato</a></li>
-                    </ul>
-                </div>
-            </div>
-        </header>
 
-    <div class="login-container">
-        <div class="login-card">
-            <div class="login-header">
-                <!-- Logo da clínica -->
-                <img src="img/only_logotipo-white.png" alt="Clinica Viver Bem" class="logo">
-                <h2>Login</h2>
-            </div>
-            <form>
-                <div class="input-group">
-                    <i class="icon-user"></i>
-                    <input type="email" placeholder="Usuário" required>
-                </div>
-                <div class="input-group">
-                    <i class="icon-lock"></i>
-                    <input type="password" placeholder="Senha" required>
-                </div>
-                <button type="submit" class="btn-login">Entrar</button>
-            </form>
-            <div class="register-link">
-                <p>Ainda não tem conta? <a href="cadastro.html">Cadastre-se</a></p>
+<body>
+    <!-- Cabeçalho -->
+    <header id="nav-sobreposition">
+        <!-- Barra de navegação pelo site -->
+        <div class="nav-menu singlepage-nav">
+            <div class="nav-menu-inner-top">
+                <p><img src="img/only_logotipo-white.png" alt="logotipo-clinici"></p>
+                <ul class="nav-menu-inner">
+                    <li><a href="index.html#inicio">Início</a></li>
+                    <li><a hrefindex.html="#sobre">Sobre</a></li>
+                    <li><a href="form.html" id="nav-login">Cadastrar</a></li>
+                    <li><a href="#contact-us">Contato</a></li>
+                    <li id="translate-position">
+                        <div id="google_translate_element" style="z-index: 8; text-align: center;"></div>
+                    </li>
+                </ul>
             </div>
         </div>
-    </div>
+
+        <div class="nav-menu-dropdown">
+            <!-- Ícone do menu -->
+            <div class="menu-icon">
+                <span class="material-symbols-outlined menu-icon-open">menu</span>
+                <span class="material-symbols-outlined menu-icon-close" style="display: none;">close</span>
+            </div>
+
+
+            <!-- O menu dropdown -->
+            <div class="dropdown" id="dropdown">
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item" href="#inicio">Início</a></li>
+                    <li><a class="dropdown-item" href="#sobre">Sobre</a></li>
+                    <li><a class="dropdown-item" href="login.html">Login</a></li>
+                    <li><a class="dropdown-item" href="form.html" id="nav-login">Cadastrar</a></li>
+                    <li><a class="dropdown-item" href="#contact-us">Contato</a></li>
+                    <li id="dropdown-item">
+                        <div id="google_translate_element" style="z-index: 8; text-align: center;"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="login-container">
+            <div class="login-card">
+                <div class="login-header">
+                    <!-- Logo da clínica -->
+                    <img src="img/only_logotipo-white.png" alt="Clinica Viver Bem" class="logo">
+                    <h2>Login</h2>
+                </div>
+                <form>
+                    <div class="input-group">
+                        <i class="icon-user"></i>
+                        <input type="email" placeholder="Usuário" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="icon-lock"></i>
+                        <input type="password" placeholder="Senha" required>
+                    </div>
+                    <button type="submit" class="btn-login"><a href="agendamento.html">Entrar</a></button>
+                </form>
+                <div class="register-link">
+                    <p>Ainda não tem conta? <a href="form.html">Cadastre-se</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
 
     <!-- Contato e Acessibilidade -->
     <footer>
@@ -228,4 +222,5 @@
     </footer>
 
 </body>
+
 </html>
