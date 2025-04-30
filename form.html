@@ -154,11 +154,18 @@
             </div>
             <!-- completar formulário -->
             <div class="check">
-                <input type="reset" value="Limpar">
+                <!-- Reset -->
+                <input id="clear" style="display: inline-block;" type="reset" value="Limpar">
             
-                <button type="button" onclick="location.href='login.html'">Já tenho uma conta</button>
+                <!-- Login -->
+                <a href="login.html">
+                    <input type="button" value="Já tenho uma conta!" class="botao-link">
+                </a>
             
-                <button type="submit" onclick="location.href='login.html'">Cadastrar</button>
+                <!-- Cadastro -->
+                <a href="login.html">
+                    <input type="submit" value="Cadastrar" class="botao-link">
+                </a>
             </div>          
         </form>
     </div>
