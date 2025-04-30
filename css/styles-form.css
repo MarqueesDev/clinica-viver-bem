@@ -17,27 +17,6 @@ body {
     color: white;
 }
 
-@media (max-width: 1500px) {
-    body {
-        background-size: auto;
-    }
-    form#formClic {
-        display: block;
-        max-width: 800px;
-        background-color: rgba(0, 0, 0, 0.843);
-        margin: 0px auto;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        border: 5px solid #530727a6;
-        border-radius: 25px;
-    }
-    
-    div input,
-    div label {
-        display: block;
-    }    
-}
-
 .all {
     margin: 40px 0px;
     margin-top: 25px;
@@ -166,15 +145,6 @@ div label {
     width: 363px;
     font: 0.5em sans-serif;
 }
-/* NOVO BLOCO ADICIONADO — Centraliza os botões dentro do contêiner .check */
-.check {
-    display: flex; /* coloca os elementos em linha */
-    justify-content: center; /* centraliza horizontalmente */
-    align-items: center; /* alinha verticalmente (opcional) */
-    gap: 10px; /* espaço entre os botões */
-    flex-wrap: wrap; /* permite quebrar linha em telas pequenas */
-    margin-top: 20px; /* espaçamento superior opcional */
-}
 
 /* SUBMIT */
 .check input[type="submit"] {
@@ -240,4 +210,25 @@ div label {
 
 .astimport {
     color: rgb(202, 0, 0);
+}
+
+@media (max-width: 1500px) {
+    body {
+        background-size: auto;
+    }
+    form#formClic {
+        display: block;
+        max-width: 800px;
+        background-color: rgba(0, 0, 0, 0.843);
+        margin: 0px auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border: 5px solid #530727a6;
+        border-radius: 25px;
+    }
+    
+    div input,
+    div label {
+        display: block;
+    }    
 }

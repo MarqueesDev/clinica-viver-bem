@@ -38,24 +38,6 @@ main {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsividade */
-@media (max-width: 1500px) {
-  form#formClic {
-    display: block;
-    max-width: 800px;
-    background-color: rgba(0, 0, 0, 0.843);
-    margin: 0 auto;
-    padding: 10px 0;
-    border: 5px solid #530727a6;
-    border-radius: 25px;
-  }
-
-  div input,
-  div label {
-    display: block;
-  }
-}
-
 /* Cartão de login */
 .login-card {
   display: flex;
