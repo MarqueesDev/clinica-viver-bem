@@ -226,9 +226,16 @@ div label {
         border: 5px solid #530727a6;
         border-radius: 25px;
     }
-    
     div input,
     div label {
         display: block;
     }    
+    .check {
+        display: flex;
+        flex-direction: column; /* um embaixo do outro */
+        align-items: center;     /* centraliza na horizontal */
+        gap: 10px;               /* espaço entre os botões */
+        margin-top: 20px;
+    }
+    
 }

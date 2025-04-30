@@ -65,8 +65,8 @@
             <!-- O menu dropdown -->
             <div class="dropdown" id="dropdown">
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <li><a class="dropdown-item" href="#inicio">Início</a></li>
-                    <li><a class="dropdown-item" href="#sobre">Sobre</a></li>
+                    <li><a class="dropdown-item" href="index.html">Início</a></li>
+                    <li><a class="dropdown-item" href="index.html#sobre">Sobre</a></li>
                     <li><a class="dropdown-item" href="login.html">Login</a></li>
                     <li><a class="dropdown-item" href="#contact-us">Contato</a></li>
                     <li id="dropdown-item">
@@ -154,19 +154,12 @@
             </div>
             <!-- completar formulário -->
             <div class="check">
-                <!-- Reset -->
-                <input id="clear" style="display: inline-block;" type="reset" value="Limpar">
+                <input type="reset" value="Limpar">
             
-                <!-- Login -->
-                <a href="login.html">
-                    <input type="button" value="Já tenho uma conta!" class="botao-link">
-                </a>
+                <button type="button" onclick="location.href='login.html'">Já tenho uma conta</button>
             
-                <!-- Cadastro -->
-                <a href="login.html">
-                    <input type="submit" value="Cadastrar" class="botao-link">
-                </a>
-            </div>            
+                <button type="submit" onclick="location.href='login.html'">Cadastrar</button>
+            </div>          
         </form>
     </div>
     <!-- Metodo "get" do form é utilizado para receber ou buscar dados -->
