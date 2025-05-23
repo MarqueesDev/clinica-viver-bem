@@ -105,3 +105,8 @@ ul.dropdown-menu > li > a {
 .show-dropdown .menu-icon-close {
     display: block;
 }
+
+.google-tradutor {
+  z-index: 8;
+  text-align: center;
+}

@@ -53,7 +53,7 @@
                     <li><a href="#cadastrar" id="nav-login">Cadastrar</a></li>
                     <li><a href="#contact-us">Contato</a></li>
                     <li id="translate-position">
-                        <div id="google_translate_element" style="z-index: 8; text-align: center;"></div>
+                        <div id="google_translate_element" class="google-tradutor"></div>
                     </li>
                 </ul>
             </div>
@@ -63,7 +63,7 @@
             <!-- Ícone do menu -->
             <div class="menu-icon">
                 <span class="material-symbols-outlined menu-icon-open">menu</span>
-                <span class="material-symbols-outlined menu-icon-close" style="display: none;">close</span>
+                <span class="material-symbols-outlined menu-icon-close hidden">close</span>
             </div>
 
 
@@ -73,11 +73,11 @@
                     <li><a class="dropdown-item" href="#inicio">Início</a></li>
                     <li><a class="dropdown-item" href="#sobre">Sobre</a></li>
                     <li><a class="dropdown-item" href="login.html">Login</a></li>
-                    <li><a class="dropdown-item" href="#cadastrar" id="nav-login">Cadastrar</a></li>
+                    <li><a href="#cadastrar" id="nav-login-dropdown">Cadastrar</a></li>
                     <li><a class="dropdown-item" href="#contact-us">Contato</a></li>
-                    <li id="dropdown-item">
-                        <div id="google_translate_element" style="z-index: 8; text-align: center;"></div>
-                    </li>
+                    <!-- <li id="dropdown-item">
+                        <div id="google_translate_element" class="google-tradutor"></div>
+                    </li> -->
                 </ul>
             </div>
         </div>
@@ -125,46 +125,38 @@
 
             <section id="form" class="section-padding-tm">
                 <caption>
-                    <h3 class="page-title" style="font-size: 23px;"><span class="text-light">Dentre as consultas
-                            especializadas da
-                        </span>Clínica Viver Bem<span class="text-light"> possuí-mos:</span></h3>
+                    <h3 class="page-title titulo-consultas">
+                        <span class="text-light">Dentre as consultas especializadas da </span>
+                        Clínica Viver Bem
+                        <span class="text-light"> possuí-mos:</span>
+                    </h3>
+
                 </caption>
                 <ul>
-                    <div id="cardiology" class="block">
-                        <li>
-                            <div class="dark">Cardiologia;</div>
-                        </li>
-                    </div>
-                    <div id="dermatology" class="block">
-                        <li>
-                            <div class="dark">Dermatologia;</div>
-                        </li>
-                    </div>
-                    <div id="ginecology" class="block">
-                        <li>Ginecologia;</li>
-                    </div>
-                    <div id="pediatry" class="block">
-                        <li>
-                            <div class="dark">Pediatria;</div>
-                        </li>
-                    </div>
-                    <div id="endocrinology" class="block">
-                        <li>
-                            <div class="dark">Endocrinologia ;</div>
-                        </li>
-                    </div>
-                    <div id="ortopedy" class="block">
-                        <li>
-                            <div class="dark">Ortopedia</div>
-                        </li>
-                    </div>
+                    <li id="cardiology" class="block">
+                        <div class="dark">Cardiologia;</div>
+                    </li>
+                    <li id="dermatology" class="block">
+                        <div class="dark">Dermatologia;</div>
+                    </li>
+                    <li id="ginecology" class="block">Ginecologia;</li>
+                    <li id="pediatry" class="block">
+                        <div class="dark">Pediatria;</div>
+                    </li>
+                    <li id="endocrinology" class="block">
+                        <div class="dark">Endocrinologia;</div>
+                    </li>
+                    <li id="ortopedy" class="block">
+                        <div class="dark">Ortopedia</div>
+                    </li>
                 </ul>
+
             </section>
         </div>
     </main>
     <!-- COMPRAS -->
     <div id="buy-menu">
-        <span id="cadastrar" style="position: absolute; top: -70px;"></span>
+        <span id="cadastrar" class="ancora-cadastrar"></span>
         <div id="bg-emb">
             <div id="emb-scheet">
                 <h2 class="text-light">Um atendimento com foco em qualidade e eficiência, é só na <br><span
@@ -264,17 +256,15 @@
 
             <button id="acessibilidade-btn" class="acessibilidade-btn">♿</button>
 
-            <button class="cancelreading" style=" border: none; outline: none;" onclick="cancelarLeitura()">❌</button>
+            <button class="cancelreading" type="button" onclick="cancelarLeitura()">❌</button>
+
             <div id="acessibilidade-menu" class="acessibilidade-menu">
-                <button style=" border: none;
-            outline: none;" onclick="alterarFonte('+')">A+</button>
-                <button style=" border: none;
-            outline: none;" onclick="alterarFonte('-')">A-</button>
-                <button style=" border: none;
-            outline: none;" onclick="modoAltoContraste()">Alto Contraste</button>
-                <button style=" border: none;
-            outline: none;" onclick="leituraTexto()">Leitor de Texto</button>
+                <button type="button" onclick="alterarFonte('+')">A+</button>
+                <button type="button" onclick="alterarFonte('-')">A-</button>
+                <button type="button" onclick="modoAltoContraste()">Alto Contraste</button>
+                <button type="button" onclick="leituraTexto()">Leitor de Texto</button>
             </div>
+
             <!-- Script Acessibilidade -->
             <script src="js/acessibilidade.js"></script>
             <!-- End Script Acessibilidade  -->
@@ -287,9 +277,7 @@
                 }
 
             </script>
-            <script type="text/javascript"
-                src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
-                </script>
+            <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
         </div>
     </footer>
