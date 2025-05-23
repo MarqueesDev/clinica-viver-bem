@@ -43,12 +43,13 @@
             <div class="nav-menu-inner-top">
                 <p><img src="img/only_logotipo-white.png" alt="logotipo-clinici"></p>
                 <ul class="nav-menu-inner">
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="index.html#sobre">Sobre</a></li>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
                     <li><a href="login.html">Login</a></li>
+                    <li><a href="#cadastrar" id="nav-login">Cadastrar</a></li>
                     <li><a href="#contact-us">Contato</a></li>
                     <li id="translate-position">
-                        <div id="google_translate_element" style="z-index: 8; text-align: center;"></div>
+                        <div id="google_translate_element" class="google-tradutor"></div>
                     </li>
                 </ul>
             </div>
@@ -58,7 +59,7 @@
             <!-- Ícone do menu -->
             <div class="menu-icon">
                 <span class="material-symbols-outlined menu-icon-open">menu</span>
-                <span class="material-symbols-outlined menu-icon-close" style="display: none;">close</span>
+                <span class="material-symbols-outlined menu-icon-close hidden">close</span>
             </div>
 
 
@@ -70,7 +71,7 @@
                     <li><a class="dropdown-item" href="login.html">Login</a></li>
                     <li><a class="dropdown-item" href="#contact-us">Contato</a></li>
                     <li id="dropdown-item">
-                        <div id="google_translate_element" style="z-index: 8; text-align: center;"></div>
+                        <div id="google_translate_element" class="google-tradutor"></div>
                     </li>
                 </ul>
             </div>
@@ -82,7 +83,7 @@
             <div class="citation-title">
                 <!-- Título do site -->
                 <div class="citation-title-position">
-                    <h1 style="text-transform: uppercase;">Clínica Viver Bem</h1>
+                    <h1 class="titulo-principal">Clínica Viver Bem</h1>
                     <!-- Citação principal -->
                     <blockquote>
                         <q>Foco na saúde e bem-estar</q>
@@ -93,7 +94,7 @@
     </main>
     <div class="all">
         <form id="formClic" action="register.php" method="post">
-            <fieldset id="border-fset" class="check" style="margin: 30px;">
+            <fieldset id="border-fset" class="check field-margin">
                 <legend class="spaceline title">Preencha as suas informações pessoais</legend>
 
                 <label class="title" for="f-name">Nome<span class="astimport">*</span>:</label>
@@ -111,7 +112,8 @@
 
                 <label class="title" for="endereco-cadastro">Endereço<span class="astimport">*</span>:</label>
                 <input class="campo title" type="text" id="endereco-cadastro" name="endereco-cadastro"
-                    autocomplete="endereco" required>
+                    autocomplete="street-address" required>
+
 
                 <label class="title" for="tel">Telefone<span class="astimport">*</span>:</label>
                 <input class="campo title" type="tel" id="tel" name="tel" autocomplete="tel-national"
@@ -141,8 +143,8 @@
 
             </fieldset>
             <div id="option-contract" class="check">
-                <label class="title" for="contract" style="display: inline-flex;">Aceita os termos do contrato?<span
-                        class="astimport">*</span>
+                <label class="title inline-flex" for="contract">
+                    Aceita os termos do contrato?<span class="astimport">*</span>
                     <input type="checkbox" class="custom-checkbox" id="contract" name="contract" value="sim">
                 </label>
             </div>
@@ -155,18 +157,19 @@
             <!-- completar formulário -->
             <div class="check">
                 <!-- Reset -->
-                <input id="clear" style="display: inline-block;" type="reset" value="Limpar">
-            
+                <input id="clear" class="btn-reset" type="reset" value="Limpar">
+
+
                 <!-- Login -->
                 <a href="login.html">
                     <input type="button" value="Já tenho uma conta!" class="botao-link">
                 </a>
-            
+
                 <!-- Cadastro -->
                 <a href="login.html">
                     <input type="submit" value="Cadastrar" class="botao-link">
                 </a>
-            </div>          
+            </div>
         </form>
     </div>
     <!-- Metodo "get" do form é utilizado para receber ou buscar dados -->
@@ -254,17 +257,12 @@
             <!-- Copyright -->
             <button id="acessibilidade-btn" class="acessibilidade-btn">♿</button>
 
-            <button class="cancelreading" style=" border: none;
-        outline: none;" onclick="cancelarLeitura()">❌</button>
+            <button class="cancelreading" type="button" onclick="cancelarLeitura()">❌</button>
             <div id="acessibilidade-menu" class="acessibilidade-menu">
-                <button style=" border: none;
-        outline: none;" onclick="alterarFonte('+')">A+</button>
-                <button style=" border: none;
-        outline: none;" onclick="alterarFonte('-')">A-</button>
-                <button style=" border: none;
-        outline: none;" onclick="modoAltoContraste()">Alto Contraste</button>
-                <button style=" border: none;
-        outline: none;" onclick="leituraTexto()">Leitor de Texto</button>
+                <button type="button" onclick="alterarFonte('+')">A+</button>
+                <button type="button" onclick="alterarFonte('-')">A-</button>
+                <button type="button" onclick="modoAltoContraste()">Alto Contraste</button>
+                <button type="button" onclick="leituraTexto()">Leitor de Texto</button>
             </div>
             <!-- Script Acessibilidade -->
             <script src="js/acessibilidade.js"></script>
@@ -278,9 +276,8 @@
                 }
 
             </script>
-            <script type="text/javascript"
-                src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
-                </script>
+            <script type="text/javascript" <script
+                src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
         </div>
     </footer>
 </body>

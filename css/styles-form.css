@@ -239,3 +239,26 @@ div label {
     }
     
 }
+
+.btn-reset {
+  display: inline-block;
+}
+
+.inline-flex {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.field-margin {
+  margin: 30px;
+}
+
+.titulo-principal {
+  text-transform: uppercase;
+}
+
+.google-tradutor {
+  z-index: 8;
+  text-align: center;
+}
