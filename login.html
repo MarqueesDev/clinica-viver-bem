@@ -45,7 +45,7 @@
                     <li><a href="form.html" id="nav-login">Cadastrar</a></li>
                     <li><a href="#contact-us">Contato</a></li>
                     <li id="translate-position">
-                        <div id="google_translate_element" style="z-index: 8; text-align: center;"></div>
+                        <div id="google_translate_element" class="google-tradutor"></div>
                     </li>
                 </ul>
             </div>
@@ -55,7 +55,7 @@
             <!-- Ícone do menu -->
             <div class="menu-icon">
                 <span class="material-symbols-outlined menu-icon-open">menu</span>
-                <span class="material-symbols-outlined menu-icon-close" style="display: none;">close</span>
+                <span class="material-symbols-outlined menu-icon-close">close</span>
             </div>
 
 
@@ -64,11 +64,9 @@
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <li><a class="dropdown-item" href="index.html">Início</a></li>
                     <li><a class="dropdown-item" href="index.html#sobre">Sobre</a></li>
-                    <li><a class="dropdown-item" href="form.html" id="nav-login">Cadastrar</a></li>
+                    <li><a href="form.html" id="nav-login-dropdown" class="hidden">Cadastrar</a></li>
                     <li><a class="dropdown-item" href="#contact-us">Contato</a></li>
-                    <li id="dropdown-item">
-                        <div id="google_translate_element" style="z-index: 8; text-align: center;"></div>
-                    </li>
+                    <!-- <div id="google_translate_element"></div> -->
                 </ul>
             </div>
         </div>
@@ -91,7 +89,7 @@
                         <i class="icon-lock"></i>
                         <input type="password" placeholder="Senha" required>
                     </div>
-                    <button type="submit" class="btn-login"><a href="agendamento.html">Entrar</a></button>
+                    <a href="agendamento.html" class="btn-login">Entrar</a>
                 </form>
                 <div class="register-link">
                     <p>Ainda não tem conta? <a href="form.html">Cadastre-se</a></p>
@@ -187,17 +185,14 @@
 
             <button id="acessibilidade-btn" class="acessibilidade-btn">♿</button>
 
-            <button class="cancelreading" style=" border: none; outline: none;" onclick="cancelarLeitura()">❌</button>
+            <button class="cancelreading" onclick="cancelarLeitura()">❌</button>
             <div id="acessibilidade-menu" class="acessibilidade-menu">
-                <button style=" border: none;
-            outline: none;" onclick="alterarFonte('+')">A+</button>
-                <button style=" border: none;
-            outline: none;" onclick="alterarFonte('-')">A-</button>
-                <button style=" border: none;
-            outline: none;" onclick="modoAltoContraste()">Alto Contraste</button>
-                <button style=" border: none;
-            outline: none;" onclick="leituraTexto()">Leitor de Texto</button>
+                <button class="botao-acessibilidade" onclick="alterarFonte('+')">A+</button>
+                <button class="botao-acessibilidade" onclick="alterarFonte('-')">A-</button>
+                <button class="botao-acessibilidade" onclick="modoAltoContraste()">Alto Contraste</button>
+                <button class="botao-acessibilidade" onclick="leituraTexto()">Leitor de Texto</button>
             </div>
+
             <!-- Script Acessibilidade -->
             <script src="js/acessibilidade.js"></script>
             <!-- End Script Acessibilidade  -->
@@ -211,8 +206,7 @@
 
             </script>
             <script type="text/javascript"
-                src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
-                </script>
+                src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
         </div>
     </footer>

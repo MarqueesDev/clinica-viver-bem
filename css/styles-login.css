@@ -93,7 +93,10 @@ form {
 }
 
 /* Botão de envio */
-.btn-login {
+/* Botão de envio (funciona para <button> e <a>) */
+.btn-login,
+a.btn-login {
+  display: inline-block;
   width: 100%;
   height: 40px;
   background-color: #4CAF50;
@@ -102,11 +105,17 @@ form {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  box-sizing: border-box;
 }
 
-.btn-login:hover {
+.btn-login:hover,
+a.btn-login:hover {
   background-color: #3e8e41;
 }
+
 
 /* Link de cadastro */
 .register-link {
@@ -248,4 +257,26 @@ background-color: #265c27;
 text-align: center;
 font-size: 15px;
 padding-bottom: 15px;
+}
+
+.cancelreading,
+.botao-acessibilidade {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 8px 12px;
+  margin: 4px;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.cancelreading:hover,
+.botao-acessibilidade:hover {
+  background-color: #e0e0e0;
+}
+
+#google_translate_element {
+  z-index: 8;
+  text-align: center;
 }
