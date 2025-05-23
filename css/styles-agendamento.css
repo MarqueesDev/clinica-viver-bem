@@ -89,3 +89,7 @@ button {
     background-color: #666666;
     color: white
 }
+
+.titulo-principal {
+  text-transform: uppercase;
+}

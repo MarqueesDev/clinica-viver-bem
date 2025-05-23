@@ -37,11 +37,13 @@
             <div class="nav-menu-inner-top">
                 <p><img src="img/only_logotipo-white.png" alt="logotipo-clinici"></p>
                 <ul class="nav-menu-inner">
-                    <li><a href="index.html#inicio">Início</a></li>
-                    <li><a href="index.html#sobre">Sobre</a></li>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="#cadastrar" id="nav-login">Cadastrar</a></li>
                     <li><a href="#contact-us">Contato</a></li>
                     <li id="translate-position">
-                        <div id="google_translate_element" style="z-index: 8; text-align: center;"></div>
+                        <div id="google_translate_element" class="google-tradutor"></div>
                     </li>
                 </ul>
             </div>
@@ -51,7 +53,7 @@
             <!-- Ícone do menu -->
             <div class="menu-icon">
                 <span class="material-symbols-outlined menu-icon-open">menu</span>
-                <span class="material-symbols-outlined menu-icon-close" style="display: none;">close</span>
+                <span class="material-symbols-outlined menu-icon-close hidden">close</span>
             </div>
 
 
@@ -61,9 +63,9 @@
                     <li><a class="dropdown-item" href="#inicio">Início</a></li>
                     <li><a class="dropdown-item" href="#sobre">Sobre</a></li>
                     <li><a class="dropdown-item" href="#contact-us">Contato</a></li>
-                    <li id="dropdown-item">
+                    <!-- <li id="dropdown-item">
                         <div id="google_translate_element" style="z-index: 8; text-align: center;"></div>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>
@@ -74,7 +76,7 @@
             <div class="citation-title">
                 <!-- Título do site -->
                 <div class="citation-title-position">
-                    <h1 style="text-transform: uppercase;">Clínica Viver Bem</h1>
+                    <h1 class="titulo-principal">Clínica Viver Bem</h1>
                     <!-- Citação principal -->
                     <blockquote>
                         <q>Foco na saúde e bem-estar</q>
@@ -110,7 +112,7 @@
                     <input type="date" id="consulta" name="consulta">
                     <label class="title" for="horario">Horario<span class="astimport">*</span>:</label>
                     <input type="time" id="horario" name="horario">
-                    <button>Agendar</button>
+                    <button type="submit">Agendar</button>
                 </fieldset>
             </form>
 
@@ -198,21 +200,17 @@
                 <a><b class="color">Dev. João Horta</b></a>.
                 Todos os direitos reservados.
             </p>
-            <span id="finaliza-leitor" style="display: hidden;"></span>
+            <span id="finaliza-leitor" class="hidden-element"></span>
             <!-- Copyright -->
             <button id="acessibilidade-btn" class="acessibilidade-btn">♿</button>
 
-            <button class="cancelreading" style=" border: none;
-        outline: none;" onclick="cancelarLeitura()">❌</button>
+            <button class="cancelreading" type="button" onclick="cancelarLeitura()">❌</button>
+
             <div id="acessibilidade-menu" class="acessibilidade-menu">
-                <button style=" border: none;
-        outline: none;" onclick="alterarFonte('+')">A+</button>
-                <button style=" border: none;
-        outline: none;" onclick="alterarFonte('-')">A-</button>
-                <button style=" border: none;
-        outline: none;" onclick="modoAltoContraste()">Alto Contraste</button>
-                <button style=" border: none;
-        outline: none;" onclick="leituraTexto()">Leitor de Texto</button>
+                <button type="button" onclick="alterarFonte('+')">A+</button>
+                <button type="button" onclick="alterarFonte('-')">A-</button>
+                <button type="button" onclick="modoAltoContraste()">Alto Contraste</button>
+                <button type="button" onclick="leituraTexto()">Leitor de Texto</button>
             </div>
             <!-- Script Acessibilidade -->
             <script src="js/acessibilidade.js"></script>
@@ -226,9 +224,8 @@
                 }
 
             </script>
-            <script type="text/javascript"
-                src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
-                </script>
+            <script type="text/javascript" <script
+                src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
         </div>
     </footer>
 </body>

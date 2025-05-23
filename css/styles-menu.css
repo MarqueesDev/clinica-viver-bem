@@ -28,7 +28,7 @@ header {
     background-color: #000000c0;
 }
 
-#logo-position > p {
+#logo-position>p {
     text-align: left;
 }
 
@@ -39,7 +39,7 @@ header {
     color: #000;
 }
 
-.nav-menu-inner-top > p {
+.nav-menu-inner-top>p {
     margin: -10px;
     margin-left: 15px;
     text-align: left;
@@ -47,7 +47,7 @@ header {
     position: absolute;
 }
 
-.nav-menu-inner-top > p > img {
+.nav-menu-inner-top>p>img {
     width: 70px;
     display: block;
 }
@@ -59,7 +59,7 @@ header {
     margin-right: 10px;
 }
 
-.nav-menu ul.nav-menu-inner > li {
+.nav-menu ul.nav-menu-inner>li {
     width: 112px;
     height: 50px;
     box-sizing: border-box;
@@ -69,14 +69,14 @@ header {
     vertical-align: middle;
 }
 
-.nav-menu ul.nav-menu-inner > li#translate-position {
+.nav-menu ul.nav-menu-inner>li#translate-position {
     width: 2px;
     height: 50px;
     margin-left: 1px;
     margin-right: 50px;
 }
 
-.nav-menu ul.nav-menu-inner > li > a {
+.nav-menu ul.nav-menu-inner>li>a {
     box-sizing: border-box;
     display: block;
     color: rgb(255, 255, 255);
@@ -87,16 +87,16 @@ header {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-family: "Raleway",sans-serif;
+    font-family: "Raleway", sans-serif;
     transition: color 0.7s;
 }
 
-.nav-menu ul.nav-menu-inner > li > a:hover {
+.nav-menu ul.nav-menu-inner>li>a:hover {
     color: #780514;
     text-decoration: none;
 }
 
-.nav-menu ul.nav-menu-inner > li > a:visited {
+.nav-menu ul.nav-menu-inner>li>a:visited {
     box-sizing: border-box;
     display: block;
     color: rgb(255, 255, 255);
@@ -107,33 +107,49 @@ header {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-family: "Raleway",sans-serif;
+    font-family: "Raleway", sans-serif;
     transition: color 0.7s;
 }
 
-.nav-menu ul.nav-menu-inner > li > a:visited:hover {
+.nav-menu ul.nav-menu-inner>li>a:visited:hover {
     color: #780514;
     text-decoration: none;
 }
 
-.nav-menu-icon.active a, .nav-menu-icon > a.active,
-.nav-menu-icon:hover a, .nav-menu-icon > a:hover,
-.nav-menu ul.nav-menu-inner li.active > a,
-.nav-menu ul.nav-menu-inner li > a.active,
-.nav-menu ul.nav-menu-inner li:hover > a,
-.nav-menu ul.nav-menu-inner li > a:hover,
-.header-fixed .nav-menu ul.nav-menu-inner li > a.current,
-.header-fixed .nav-menu ul.nav-menu-inner li.current > a {
+.nav-menu-icon.active a,
+.nav-menu-icon>a.active,
+.nav-menu-icon:hover a,
+.nav-menu-icon>a:hover,
+.nav-menu ul.nav-menu-inner li.active>a,
+.nav-menu ul.nav-menu-inner li>a.active,
+.nav-menu ul.nav-menu-inner li:hover>a,
+.nav-menu ul.nav-menu-inner li>a:hover,
+.header-fixed .nav-menu ul.nav-menu-inner li>a.current,
+.header-fixed .nav-menu ul.nav-menu-inner li.current>a {
     color: #780514;
     text-decoration: none;
 }
 
 @media only screen and (max-width: 800px) {
     .nav-menu-inner {
-        display: none!important;
-        }
-    .nav-menu{
+        display: none !important;
+    }
+
+    .nav-menu {
         padding: 10px;
         background-color: #00000000;
     }
-    }
+}
+
+.menu-icon-close {
+    display: none;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.google-tradutor {
+  z-index: 8;
+  text-align: center;
+}
