@@ -89,16 +89,17 @@
         <section>
             <form>
                 <fieldset>
-                    <legend>Agendamento</legend>
+                    <legend class="">Agendamento</legend>
                     <label class="title" for="especializacao">Especialização<span class="astimport">*</span>:</label>
-                    <select name="especializacao" id="especializacao" placeholder="Selecione">
+                    <select name="especializacao" id="especializacao">
                         <option value="cardiologia">Cardiologia</option>
-                        <option value="demartologia">Demartologia</option>
+                        <option value="dermatologia">Dermatologia</option>
                         <option value="endocrinologia">Endocrinologia</option>
                         <option value="ginecologia">Ginecologia</option>
                         <option value="ortopedia">Ortopedia</option>
                         <option value="pediatria">Pediatria</option>
                     </select>
+
                     <label class="title" for="especialista">Especialista<span class="astimport">*</span>:</label>
                     <select name="especialista" id="especialista">
                         <option value="draalmeida">Dra. Almeida</option>
@@ -108,14 +109,29 @@
                         <option value="drferreira">Dr. Ferreira</option>
                         <option value="dralima">Dra. Lima</option>
                     </select>
+
+                    <label class="title" for="plano-saude">Plano de Saúde<span class="astimport">*</span>:</label>
+                    <select name="plano-saude" id="plano-saude">
+                        <option value="">Selecione o Plano</option>
+                        <option value="amil">Amil</option>
+                        <option value="unimed">Unimed</option>
+                        <option value="bradesco-saude">Bradesco Saúde</option>
+                        <option value="sulamerica">SulAmérica</option>
+                        <option value="hapvida">Hapvida</option>
+                        <option value="notredame-intermedica">NotreDame Intermédica</option>
+                        <option value="porto-seguro">Porto Seguro</option>
+                        <option value="golden-cross">Golden Cross</option>
+                    </select>
+
                     <label class="title" for="consulta">Data da consulta<span class="astimport">*</span>:</label>
                     <input type="date" id="consulta" name="consulta">
-                    <label class="title" for="horario">Horario<span class="astimport">*</span>:</label>
+
+                    <label class="title" for="horario">Horário<span class="astimport">*</span>:</label>
                     <input type="time" id="horario" name="horario">
+
                     <button type="submit">Agendar</button>
                 </fieldset>
             </form>
-
         </section>
     </div>
     <footer>

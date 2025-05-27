@@ -1,23 +1,160 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
 body {
+    min-width: 850px;
     padding-top: 70px;
     background-color: black;
     font-size: large;
 }
+
 main {
     color: #666666;
     text-align: center;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     font-size: 14px;
-    /*line-height: 1.42857;*/
     padding: 0;
     margin: 0;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+form .form-group {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 1rem;
+}
+
+form .form-group label {
+    white-space: nowrap;
+    font-weight: bold;
+    color: white;
+    width: 35%;
+    text-align: right;
+}
+
+form .form-group input,
+form .form-group select {
+    flex: 1;
+}
+
+form button {
+    display: block;
+    margin-left: auto;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 8px;
+    background-color: #f54545;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+form button:hover {
+    background-color: #666666;
+    transform: scale(1.03);
+}
+
+input[type="date"],
+input[type="time"],
+select {
+    flex: 1;
+    height: 3rem;
+    padding: 0 1rem;
+    margin-top: 10px;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    /* ❌ max-width: 250px foi removido */
+}
+
+input[type="date"],
+input[type="time"],
+select {
+    border: 2px solid transparent;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="date"]:hover,
+input[type="time"]:hover,
+select:hover,
+input[type="date"]:focus,
+input[type="time"]:focus,
+select:focus {
+    outline: none;
+    border-color: #f54545;
+    box-shadow: 0 0 8px rgba(245, 69, 69, 0.3);
+}
+
+
+input {
+    width: 12rem;
+    height: 3rem;
+    border-radius: 10px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 10px;
+    font-size: large;
+}
+
+fieldset {
+    padding: 6rem;
+    border-radius: 10px
+}
+
+legend {
+    background-color: #880c0ca2;
+    display: inline-block;
+    width: 300px;
+    text-align: center;
+    padding: 1.2rem 2rem;
+    font-size: 2em;
+    font-weight: 700;
+    color: #eeeeee;
+    font-family: "Bebas Neue", sans-serif;
+    text-shadow: #000 2px 3px 5px;
+    border-radius: 10px;
+    border: none;
+}
+
+
+button {
+    margin-top: 10px;
+    padding: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    background-color: #666666;
+    color: white
+}
+
+.titulo-principal {
+    text-transform: uppercase;
 }
 
 .agenda-user {
@@ -42,7 +179,12 @@ section {
 }
 
 /*heading*/
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: #333;
     text-transform: uppercase;
     font-family: 'Raleway', sans-serif;
@@ -52,44 +194,95 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: 1.5px;
 }
 
-select {
-    width: 12rem;
-    height: 3rem;
-    border-radius: 10px;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-bottom: 10px;
-    font-size: large;
-}
+@media (max-width: 1000px) {
+    .agenda-user {
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+        margin: 0 auto;
+        width: 100%;
+        box-sizing: border-box;
+    }
 
-input {
-    width: 12rem;
-    height: 3rem;
-    border-radius: 10px;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-bottom: 10px;
-    font-size: large;
-}
+    section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
 
-fieldset {
-    padding: 6rem;
-    border-radius: 10px
-}
+    form {
+        width: 100%;
+        max-width: 500px;
+        display: flex;
+        justify-content: center;
+    }
 
-legend {
-    border: 5px solid #292727;
-}
+    fieldset {
+        width: 100%;
+        padding: 2rem 1rem;
+        box-sizing: border-box;
+    }
 
-button {
-    margin-top: 10px;
-    padding: 1rem;
-    font-family: Arial, Helvetica, sans-serif;
-    border-radius: 10px;
-    background-color: #666666;
-    color: white
-}
+    form .form-group {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: left;
+        gap: 0.5rem;
+    }
 
-.titulo-principal {
-  text-transform: uppercase;
+    form .form-group label {
+        text-align: left;
+        width: 100%;
+    }
+
+    form .form-group input,
+    form .form-group select,
+    input[type="date"],
+    input[type="time"] {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    form button {
+        width: 30%;
+        margin: auto;
+        margin-top: 20px;
+        padding: 0.75rem;
+    }
+
+    form .form-group input,
+    form .form-group select,
+    input[type="date"] {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        width: 30%;
+        margin: 0 auto;
+        margin-top: 10px;
+
+        box-sizing: border-box;
+    }
+
+    form .form-group input,
+    form .form-group select,
+    input[type="time"] {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        width: 20%;
+        margin: 0 auto;
+        margin-top: 10px;
+        box-sizing: border-box;
+    }
+
+    label.title {
+        display: block;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto 0.25rem auto;
+        margin-top: 10px;
+        padding: 0;
+    }
+
+
 }
