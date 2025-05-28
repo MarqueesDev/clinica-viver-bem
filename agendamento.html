@@ -82,7 +82,7 @@
     </main>
     <div class="agenda-user">
         <section>
-            <form>
+            <form id="no-ctc">
                 <fieldset>
                     <legend class="">Agendamento</legend>
                     <label class="title" for="especializacao">Especialização<span class="astimport">*</span>:</label>
@@ -129,18 +129,17 @@
             </form>
         </section>
     </div>
-    <footer>
+<footer>
         <!--Footer Logo-->
         <div class="footer-logo">
             <p>
-                <a href="#inicio">
+                <a href="#contact-us">
                     <img src="img/logotipo-white.png" alt="clinic-icon" />
                 </a>
             </p>
         </div>
 
-        <form id="contactFormu" action="https://formspree.io/f/xdkeeegn" method="POST"
-            onsubmit="return validarFormulario()">
+        <form id="contactFormu" action="https://formspree.io/f/xdkeeegn" method="POST">
 
             <h2>Contate-nos</h2>
 
@@ -159,12 +158,16 @@
             <button id="contact-buttom" type="submit">Enviar solicitação de contato</button>
         </form>
         <div id="formMessage"></div>
+        <div class="nebula"></div>
+        <div class="nebula nebula-1"></div>
+        <div class="nebula nebula-2"></div>
+        <div class="nebula nebula-3"></div>
         <div id="messageModal" class="modal">
             <div class="modal-content">
                 <p id="modalMessage"></p>
             </div>
         </div>
-        <script src="js/notification-background.js"></script>
+        <script src="js/space-background.js"></script>
         <script>
             const form = document.getElementById('contactFormu');
             const formMessage = document.getElementById('formMessage');
@@ -198,25 +201,19 @@
 
         <div id="footend-color">
             <!-- SEGURANÇA -->
-            <p><small id="ocult">Equipados com tecnologia de ponta e uma equipe dedicada - garantimos o cuidado e a
-                    saúde
+            <p><small id="ocult">quipados com tecnologia de ponta e uma equipe dedicada - garantimos o cuidado e a saúde
                     de nossos pacientes em cada atendimento. - <q>Sua saúde é nossa prioridade!</q> - <span>Clínica
                         Viver Bem</span>.</small></p>
             <!-- SEGURANÇA -->
 
             <!-- Copyright -->
             <p id="contact-us" class="copyright">
-                &copy; 2025 <a><b class="color">Dev. Alan Marques</b></a>,
-                <a><b class="color">Dev. Mateus Vasconcelos </b></a> &amp;
-                <a><b class="color">Dev. João Horta</b></a>.
-                Todos os direitos reservados.
+                &copy; 2025 <a><b class="color">Dev. Alan Marques</b></a>. Todos os direitos reservados.
             </p>
-            <span id="finaliza-leitor" class="hidden-element"></span>
             <!-- Copyright -->
             <button id="acessibilidade-btn" class="acessibilidade-btn">♿</button>
 
             <button class="cancelreading" type="button" onclick="cancelarLeitura()">❌</button>
-
             <div id="acessibilidade-menu" class="acessibilidade-menu">
                 <button type="button" onclick="alterarFonte('+')">A+</button>
                 <button type="button" onclick="alterarFonte('-')">A-</button>
@@ -227,7 +224,7 @@
             <script src="js/acessibilidade.js"></script>
             <script src="js/dropdown-script.js"></script>
             <script src="js/traducao-persistente.js"></script>
-            <!-- End Script JS  -->
+            <!-- End Script jS -->
             <script type="text/javascript">
                 function googleTranslateElementInit() {
                     new google.translate.TranslateElement({
