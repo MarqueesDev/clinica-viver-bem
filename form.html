@@ -30,9 +30,6 @@
     <!-- PRELOAD -->
     <link rel="preload" as="image" href="img/*" type="image/jpeg">
 
-    <!-- script -->
-    <script src="js/dropdown-script.js"></script>
-
 </head>
 
 <body>
@@ -45,7 +42,7 @@
                 <ul class="nav-menu-inner">
                     <li><a href="index.html#inicio">Início</a></li>
                     <li><a href="index.html#sobre">Sobre</a></li>
-                    <li><a href="login.html">Login</a></li>
+                    <li><a href="login.html">Entrar</a></li>
                     <li><a href="#contact-us">Contato</a></li>
                     <li id="translate-position">
                         <div id="google_translate_element" class="google-tradutor"></div>
@@ -67,7 +64,7 @@
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <li><a class="dropdown-item" href="index.html">Início</a></li>
                     <li><a class="dropdown-item" href="index.html#sobre">Sobre</a></li>
-                    <li><a class="dropdown-item" href="login.html">Login</a></li>
+                    <li><a class="dropdown-item" href="login.html">Entrar</a></li>
                     <li><a class="dropdown-item" href="#contact-us">Contato</a></li>
                     <li id="dropdown-item">
                         <div id="google_translate_element" class="google-tradutor"></div>
@@ -263,9 +260,11 @@
                 <button type="button" onclick="modoAltoContraste()">Alto Contraste</button>
                 <button type="button" onclick="leituraTexto()">Leitor de Texto</button>
             </div>
-            <!-- Script Acessibilidade -->
+            <!-- Script JS -->
             <script src="js/acessibilidade.js"></script>
-            <!-- End Script Acessibilidade  -->
+            <script src="js/dropdown-script.js"></script>
+            <script src="js/traducao-persistente.js"></script>
+            <!-- End Script jS -->
             <script type="text/javascript">
                 function googleTranslateElementInit() {
                     new google.translate.TranslateElement({

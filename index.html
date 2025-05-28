@@ -34,9 +34,6 @@
     <!-- PRELOAD -->
     <link rel="preload" as="image" href="img/*" type="image/jpeg">
 
-    <!-- script -->
-    <script src="js/dropdown-script.js"></script>
-
 </head>
 
 <body id="inicio">
@@ -49,7 +46,7 @@
                 <ul class="nav-menu-inner">
                     <li><a href="#inicio">Início</a></li>
                     <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="login.html">Login</a></li>
+                    <li><a href="login.html">Entrar</a></li>
                     <li><a href="#cadastrar" id="nav-login">Cadastrar</a></li>
                     <li><a href="#contact-us">Contato</a></li>
                     <li id="translate-position">
@@ -72,7 +69,7 @@
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <li><a class="dropdown-item" href="#inicio">Início</a></li>
                     <li><a class="dropdown-item" href="#sobre">Sobre</a></li>
-                    <li><a class="dropdown-item" href="login.html">Login</a></li>
+                    <li><a class="dropdown-item" href="login.html">Entrar</a></li>
                     <li><a href="#cadastrar" id="nav-login-dropdown">Cadastrar</a></li>
                     <li><a class="dropdown-item" href="#contact-us">Contato</a></li>
                     <!-- <li id="dropdown-item">
@@ -134,17 +131,17 @@
                 </caption>
                 <ul>
                     <li id="cardiology" class="block">
-                        <div class="dark">Cardiologia;</div>
+                        <div class="dark">Cardiologia</div>
                     </li>
                     <li id="dermatology" class="block">
-                        <div class="dark">Dermatologia;</div>
+                        <div class="dark">Dermatologia</div>
                     </li>
-                    <li id="ginecology" class="block">Ginecologia;</li>
+                    <li id="ginecology" class="block">Ginecologia</li>
                     <li id="pediatry" class="block">
-                        <div class="dark">Pediatria;</div>
+                        <div class="dark">Pediatria</div>
                     </li>
                     <li id="endocrinology" class="block">
-                        <div class="dark">Endocrinologia;</div>
+                        <div class="dark">Endocrinologia</div>
                     </li>
                     <li id="ortopedy" class="block">
                         <div class="dark">Ortopedia</div>
@@ -265,9 +262,12 @@
                 <button type="button" onclick="leituraTexto()">Leitor de Texto</button>
             </div>
 
-            <!-- Script Acessibilidade -->
+            <!-- Script JS -->
             <script src="js/acessibilidade.js"></script>
-            <!-- End Script Acessibilidade  -->
+            <script src="js/dropdown-script.js"></script>
+            <script src="js/traducao-persistente.js"></script>
+            <!-- End Script JS  -->
+            <!-- Script Google Translate -->
             <script type="text/javascript">
                 function googleTranslateElementInit() {
                     new google.translate.TranslateElement({
@@ -275,10 +275,9 @@
                         includedLanguages: 'en,es,fr,de,pt' // Lista de idiomas incluídos, sem a vírgula extra
                     }, 'google_translate_element');
                 }
-
             </script>
             <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
+            <!-- End Google Translate -->
         </div>
     </footer>
 </body>
