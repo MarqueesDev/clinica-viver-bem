@@ -1,8 +1,26 @@
 function googleTranslateElementInit() {
     new google.translate.TranslateElement({
-        pageLanguage: 'pt', // Idioma da página
-        includedLanguages: 'en,es,fr,de,pt' // Lista de idiomas incluídos, sem a vírgula extra
+        pageLanguage: 'pt',
+        includedLanguages: 'en,es,fr,de,pt'
     }, 'google_translate_element');
+
+    // Espera o widget carregar para aplicar idioma
+    waitForTranslateWidget(() => {
+        aplicarIdioma();
+        monitorarClique();
+        restaurarScroll();
+    });
+}
+
+// Espera o iframe do Google Translate aparecer na DOM
+function waitForTranslateWidget(callback) {
+    const checkFrame = setInterval(() => {
+        const frame = document.querySelector("iframe.goog-te-menu-frame");
+        if (frame) {
+            clearInterval(checkFrame);
+            callback();
+        }
+    }, 500);
 }
 
 function salvarIdioma(idioma) {
@@ -12,7 +30,6 @@ function salvarIdioma(idioma) {
 function aplicarIdioma() {
     const idioma = localStorage.getItem("idiomaSelecionado");
     if (!idioma || idioma === 'português (brasil)') {
-        // Não aplica tradução ao retornar para o padrão
         document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/';
         localStorage.removeItem("idiomaSelecionado");
         return;
@@ -42,15 +59,12 @@ function monitorarClique() {
                 const lang = e.target.innerText.toLowerCase().trim();
 
                 if (lang === "português (brasil)") {
-                    // Desativa tradução
                     localStorage.removeItem("idiomaSelecionado");
                     document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/';
 
-                    // Salva a posição atual do scroll
                     const scrollY = window.scrollY || document.documentElement.scrollTop;
                     localStorage.setItem('scrollRestaurar', scrollY);
 
-                    // Aguarda 5 segundos, depois recarrega normalmente (como F5)
                     setTimeout(() => {
                         location.reload();
                     }, 5000);
@@ -73,12 +87,6 @@ function restaurarScroll() {
         setTimeout(() => {
             window.scrollTo(0, parseInt(scroll));
             localStorage.removeItem('scrollRestaurar');
-        }, 200); // pequeno delay para garantir que tudo carregou
+        }, 200);
     }
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-    aplicarIdioma();
-    restaurarScroll();
-    monitorarClique();
-});
